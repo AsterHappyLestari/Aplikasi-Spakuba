@@ -20,7 +20,7 @@ public class Registrasi_Controller {
     Connection con;
     Koneksi k;
     
-    public Registrasi_Controller(Registrasi_View view){
+    public Registrasi_Controller(Registrasi_View view) throws ClassNotFoundException{
         this.view = view;
         dao = new Registrasi_DAO();
         k = new Koneksi();
