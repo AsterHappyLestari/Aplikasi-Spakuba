@@ -19,18 +19,21 @@ public class Registrasi_Controller {
     Registrasi_DAO dao;
     Connection con;
     Koneksi k;
+<<<<<<< HEAD
+
+    public Registrasi_Controller(Registrasi_View view, Registrasi_Model model, Registrasi_DAO dao, Connection con, Koneksi k) {
+=======
     
-    public Registrasi_Controller(Registrasi_View view){
+    public Registrasi_Controller(Registrasi_View view) throws ClassNotFoundException{
+>>>>>>> 02e319b21a82c5e09d7fcf07c5ba6c432e6a3370
         this.view = view;
-        dao = new Registrasi_DAO();
-        k = new Koneksi();
-        
-        try{
-            con = k.getConnection();
-        }catch(Exception ex){
-            JOptionPane.showMessageDialog(view, ex.getMessage());
-        }
+        this.model = model;
+        this.dao = dao;
+        this.con = con;
+        this.k = k;
     }
+
+    
     
     public void register(){
         model = new Registrasi_Model();

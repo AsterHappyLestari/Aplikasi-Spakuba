@@ -5,6 +5,8 @@
  */
 package registrasi;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -15,7 +17,7 @@ import javax.swing.JTextField;
 public class Registrasi_View extends javax.swing.JFrame {
 
     Registrasi_Controller controller;
-    public Registrasi_View() {
+    public Registrasi_View() throws ClassNotFoundException {
         initComponents();
         controller = new Registrasi_Controller(this);
     }
@@ -83,33 +85,36 @@ public class Registrasi_View extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 3, 48)); // NOI18N
-        jLabel1.setText("REGISTER");
+        jLabel1.setBackground(new java.awt.Color(153, 255, 153));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Register Admin");
 
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel2.setText("COMPANY");
 
-        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel3.setText("ID ADMIN");
 
-        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel4.setText("NO TELP");
 
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel5.setText("ALAMAT");
 
-        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel6.setText("NAMA");
 
-        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel7.setText("PASSWORD");
 
-        jLabel8.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel8.setText("EMAIL");
 
-        btnregistrasi.setFont(new java.awt.Font("Comic Sans MS", 3, 24)); // NOI18N
+        btnregistrasi.setBackground(new java.awt.Color(153, 153, 255));
+        btnregistrasi.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         btnregistrasi.setText("REGISTRASI");
         btnregistrasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,33 +122,24 @@ public class Registrasi_View extends javax.swing.JFrame {
             }
         });
 
-        txtnama.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        txtnama.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
-        txtid.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        txtid.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
-        txtpassword.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        txtpassword.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
-        txtnotelp.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        txtnotelp.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
-        txtalamat.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        txtalamat.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
-        txtemail.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        txtemail.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
-        txtcompany.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        txtcompany.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(297, 297, 297))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnregistrasi)
-                        .addGap(316, 316, 316))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(139, 139, 139)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,7 +150,7 @@ public class Registrasi_View extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel4)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtnotelp, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtnama, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -164,12 +160,16 @@ public class Registrasi_View extends javax.swing.JFrame {
                     .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtcompany, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnregistrasi)
+                .addGap(318, 318, 318))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
@@ -198,9 +198,9 @@ public class Registrasi_View extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(32, 32, 32)
                 .addComponent(btnregistrasi)
-                .addGap(36, 36, 36))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -252,7 +252,11 @@ public class Registrasi_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Registrasi_View().setVisible(true);
+                try {
+                    new Registrasi_View().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(Registrasi_View.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
