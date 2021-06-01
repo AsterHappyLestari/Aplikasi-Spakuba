@@ -15,17 +15,15 @@ import java.util.logging.Logger;
  * @author USER
  */
 public class Koneksi {
-    private String url = "jdbc:mysql://localhost/db_spakuba";
-    private String username = "root";
-    private String password = "";
+    private final String url = "jdbc:mysql://localhost/db_spakuba";
+    private final String username = "root";
+    private final String password = "";
     
     public Connection getConnection(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
             return java.sql.DriverManager.getConnection(url,username,password);
-        }catch(ClassNotFoundException ex) {
-            Logger.getLogger(Koneksi.class.getName()).log(Level.SEVERE, null, ex);
-        }catch(SQLException ex){
+        }catch(ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Koneksi.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;   
