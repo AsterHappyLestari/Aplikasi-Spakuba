@@ -8,7 +8,10 @@ package DAO;
 import Model.Admin_Model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+<<<<<<< HEAD
 import java.sql.ResultSet;
+=======
+>>>>>>> 6ca666c6bafc0f01e10cfee43c9266f11720df5b
 import java.sql.SQLException;
 import koneksi.Koneksi;
 
