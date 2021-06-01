@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package koneksi;
+import com.mysql.jdbc.Driver;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,11 +19,13 @@ public class Koneksi {
     private String username = "root";
     private String password = "";
     
-    public Connection getConnection() throws ClassNotFoundException{
+    public Connection getConnection(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
             return java.sql.DriverManager.getConnection(url,username,password);
-        }catch(SQLException ex) {
+        }catch(ClassNotFoundException ex) {
+            Logger.getLogger(Koneksi.class.getName()).log(Level.SEVERE, null, ex);
+        }catch(SQLException ex){
             Logger.getLogger(Koneksi.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;   
@@ -31,7 +34,7 @@ public class Koneksi {
     public ResultSet getQuery(Connection con, String sql) throws SQLException{
         return con.createStatement().executeQuery(sql);
     }
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args){
         Koneksi koneksi = new Koneksi();
         if(koneksi.getConnection() != null){
             javax.swing.JOptionPane.showMessageDialog(null, "Koneksi OK");

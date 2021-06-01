@@ -19,18 +19,16 @@ public class Registrasi_Controller {
     Registrasi_DAO dao;
     Connection con;
     Koneksi k;
-    
-    public Registrasi_Controller(Registrasi_View view){
+
+    public Registrasi_Controller(Registrasi_View view, Registrasi_Model model, Registrasi_DAO dao, Connection con, Koneksi k) {
         this.view = view;
-        dao = new Registrasi_DAO();
-        k = new Koneksi();
-        
-        try{
-            con = k.getConnection();
-        }catch(Exception ex){
-            JOptionPane.showMessageDialog(view, ex.getMessage());
-        }
+        this.model = model;
+        this.dao = dao;
+        this.con = con;
+        this.k = k;
     }
+
+    
     
     public void register(){
         model = new Registrasi_Model();
