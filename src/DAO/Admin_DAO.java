@@ -5,7 +5,10 @@
  */
 package DAO;
 
+import Model.Admin_Model;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import koneksi.Koneksi;
 
 /**
@@ -20,7 +23,7 @@ public class Admin_DAO {
        con = k.getConnection();
    }
    
-   public void insert(Connection con, Admin_Model admin){
+   public void insert(Connection con, Admin_Model admin) throws SQLException{
        String sql = "insert into admin values(?,?,?,?,?,?,?)";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, admin.getId_admin());
@@ -31,7 +34,7 @@ public class Admin_DAO {
        ps.setString(6, admin.getUsername());
        ps.setString(7, admin.getPassword());
    }
-   public static void update(Connection con, Admin_Model admin){
+   public static void update(Connection con, Admin_Model admin) throws SQLException{
        String sql = "update admin set username=?, password=?"
                +"where namaadmin=? and namacompany=? and notelpadmin=? and alamatadmin=?";
        PreparedStatement ps = con.prepareStatement(sql);

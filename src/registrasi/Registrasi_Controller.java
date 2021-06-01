@@ -7,6 +7,7 @@ package registrasi;
 
 import java.sql.Connection;
 import javax.swing.JOptionPane;
+import static javax.swing.text.html.HTML.Tag.HEAD;
 import koneksi.Koneksi;
 
 /**
@@ -19,13 +20,9 @@ public class Registrasi_Controller {
     Registrasi_DAO dao;
     Connection con;
     Koneksi k;
-<<<<<<< HEAD
 
-    public Registrasi_Controller(Registrasi_View view, Registrasi_Model model, Registrasi_DAO dao, Connection con, Koneksi k) {
-=======
-    
     public Registrasi_Controller(Registrasi_View view) throws ClassNotFoundException{
->>>>>>> 02e319b21a82c5e09d7fcf07c5ba6c432e6a3370
+
         this.view = view;
         this.model = model;
         this.dao = dao;
