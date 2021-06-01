@@ -219,7 +219,7 @@ public class Registrasi_View extends javax.swing.JFrame {
 
     private void btnregistrasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregistrasiActionPerformed
         // TODO add your handling code here:
-        controller.register();
+        controller.admin();
     }//GEN-LAST:event_btnregistrasiActionPerformed
 
     /**
