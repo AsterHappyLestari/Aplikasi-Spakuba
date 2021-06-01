@@ -5,6 +5,8 @@
  */
 package registrasi;
 
+import DAO.Admin_DAO;
+import Model.Admin_Model;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
 import static javax.swing.text.html.HTML.Tag.HEAD;
@@ -16,24 +18,23 @@ import koneksi.Koneksi;
  */
 public class Registrasi_Controller {
     Registrasi_View view;
-    Registrasi_Model model;
-    Registrasi_DAO dao;
+    Admin_Model model;
+    Admin_DAO dao;
     Connection con;
     Koneksi k;
 
     public Registrasi_Controller(Registrasi_View view) throws ClassNotFoundException{
 
         this.view = view;
-        this.model = model;
-        this.dao = dao;
-        this.con = con;
-        this.k = k;
+        dao = new Admin_DAO();
+        k = new Koneksi();
+        con = k.getConnection();
     }
 
     
     
-    public void register(){
-        model = new Registrasi_Model();
+    public void admin(){
+        model = new Admin_Model();
         model.setId_admin(view.getTxtid().getText());
         model.setNamaadmin(view.getTxtnama().getText());
         model.setNamacompany(view.getTxtcompany().getText());
@@ -43,7 +44,7 @@ public class Registrasi_Controller {
         model.setPassword(view.getTxtpassword().getText());
         
         try{
-            dao.register(model);
+            dao.insert(con, model);
             javax.swing.JOptionPane.showMessageDialog(null, "Register Berhasil");
         }catch(Exception ex){
             javax.swing.JOptionPane.showMessageDialog(null, "Error"+ex.getMessage());
