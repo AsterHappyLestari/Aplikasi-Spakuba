@@ -7,8 +7,8 @@ package login;
 
 /**
  *
- * @author Asus
+ * @author Ezik Haq Wahid
  */
-public class loginmodel {
+public class Login_Controller {
     
 }
