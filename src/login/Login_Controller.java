@@ -43,7 +43,7 @@ public class Login_Controller {
                 javax.swing.JOptionPane.showMessageDialog(null, "Login Berhasil");
                 return dao.login(model);
             }else{
-                javax.swing.JOptionPane.showMessageDialog(null, "Invalid");
+                javax.swing.JOptionPane.showMessageDialog(null, "Data Salah atau Tidak Tersedia");
             }
         }catch(Exception ex){
             javax.swing.JOptionPane.showMessageDialog(null, "Error"+ex.getMessage());     }
