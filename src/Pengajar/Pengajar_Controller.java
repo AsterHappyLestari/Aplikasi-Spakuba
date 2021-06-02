@@ -32,14 +32,12 @@ public class Pengajar_Controller {
     
     
     public void admin(){
-        model = new Admin_Model();
-        model.setId_admin(view.getTxtid().getText());
-        model.setNamaadmin(view.getTxtnama().getText());
-        model.setNamacompany(view.getTxtcompany().getText());
-        model.setNotelpadmin(view.getTxtnotelp().getText());
-        model.setAlamatadmin(view.getTxtalamat().getText());
-        model.setUsername(view.getTxtemail().getText());
-        model.setPassword(view.getTxtpassword().getText());
+        model = new Pengajar_Model();
+        model.setId_pengajar(view.getTxtId_pengajar().getText());
+        model.setNamapengajar(view.getTxtNamapengajar().getText());
+        model.setEmail(view.getTxtEmail().getText());
+        model.setNotelppengajar(view.getTxtNotelppengajar().getText());
+        model.setAlamatpengajar(view.getTxtAlamat().getText());
         
         try{
             dao.insert(con, model);
