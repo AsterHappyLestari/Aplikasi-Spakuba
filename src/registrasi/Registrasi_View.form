@@ -69,7 +69,10 @@
               <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btnregistrasi" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="btnregistrasi" max="32767" attributes="0"/>
+                      <Component id="ToLogin" max="32767" attributes="0"/>
+                  </Group>
                   <EmptySpace min="-2" pref="318" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -115,7 +118,9 @@
                   </Group>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Component id="btnregistrasi" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="69" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="ToLogin" pref="40" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -251,6 +256,20 @@
               <Font name="Times New Roman" size="24" style="0"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="ToLogin">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="24" style="3"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Go To Login"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ToLoginActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

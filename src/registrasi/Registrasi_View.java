@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import login.Login_View;
 
 /**
  *
@@ -82,6 +83,7 @@ public class Registrasi_View extends javax.swing.JFrame {
         txtalamat = new javax.swing.JTextField();
         txtemail = new javax.swing.JTextField();
         txtcompany = new javax.swing.JTextField();
+        ToLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -136,6 +138,15 @@ public class Registrasi_View extends javax.swing.JFrame {
 
         txtcompany.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
+        ToLogin.setBackground(new java.awt.Color(204, 204, 255));
+        ToLogin.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
+        ToLogin.setText("Go To Login");
+        ToLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ToLoginActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -163,7 +174,9 @@ public class Registrasi_View extends javax.swing.JFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnregistrasi)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnregistrasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ToLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(318, 318, 318))
         );
         jPanel1Layout.setVerticalGroup(
@@ -200,7 +213,9 @@ public class Registrasi_View extends javax.swing.JFrame {
                     .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addComponent(btnregistrasi)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(ToLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -221,6 +236,12 @@ public class Registrasi_View extends javax.swing.JFrame {
         // TODO add your handling code here:
         controller.admin();
     }//GEN-LAST:event_btnregistrasiActionPerformed
+
+    private void ToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ToLoginActionPerformed
+        // TODO add your handling code here:
+        Login_View login = new Login_View();
+        login.setVisible(true);
+    }//GEN-LAST:event_ToLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -262,6 +283,7 @@ public class Registrasi_View extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ToLogin;
     private javax.swing.JButton btnregistrasi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
