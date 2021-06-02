@@ -151,9 +151,10 @@ public class Login_View extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         try {
-            controller.login();
-            spakubaaplikasi_view home = new spakubaaplikasi_view();
-            home.setVisible(true);
+            if(controller.login() != null){
+                spakubaaplikasi_view home = new spakubaaplikasi_view();
+                home.setVisible(true);
+            }
         } catch (SQLException ex) {
             Logger.getLogger(Login_View.class.getName()).log(Level.SEVERE, null, ex);
         }
