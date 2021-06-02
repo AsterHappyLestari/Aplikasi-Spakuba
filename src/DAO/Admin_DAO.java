@@ -28,7 +28,7 @@ public class Admin_DAO {
        String sql = "Select * from admin where username = ? and password = ?";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1,log.getUsername());
-       ps.setString(1,log.getPassword());
+       ps.setString(2,log.getPassword());
        ResultSet rs = ps.executeQuery();
        
        if(rs.next()){
