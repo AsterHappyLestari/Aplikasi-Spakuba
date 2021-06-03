@@ -15,13 +15,13 @@ import koneksi.Koneksi;
  * @author USER
  */
 public class Siswa_Controller {
-    Siswa_View view;
+    SiswaForm_View view;
     Siswa_Model model;
     Siswa_DAO dao;
     Connection con;
     Koneksi k;
 
-    public Siswa_Controller(Siswa_View view) throws ClassNotFoundException{
+    public Siswa_Controller(SiswaForm_View view) throws ClassNotFoundException{
 
         this.view = view;
         dao = new Siswa_DAO();

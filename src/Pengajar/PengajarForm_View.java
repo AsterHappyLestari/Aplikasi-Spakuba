@@ -12,10 +12,10 @@ import javax.swing.JTextField;
  *
  * @author USER
  */
-public class Pengajar_View extends javax.swing.JFrame {
+public class PengajarForm_View extends javax.swing.JFrame {
 
     Pengajar_Controller controller;
-    public Pengajar_View() throws ClassNotFoundException {
+    public PengajarForm_View() throws ClassNotFoundException {
         initComponents();
         controller = new Pengajar_Controller(this);
     }
@@ -217,14 +217,15 @@ public class Pengajar_View extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Pengajar_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PengajarForm_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Pengajar_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PengajarForm_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Pengajar_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PengajarForm_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Pengajar_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PengajarForm_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

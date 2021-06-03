@@ -12,12 +12,12 @@ import javax.swing.JTextField;
  *
  * @author USER
  */
-public class Siswa_View extends javax.swing.JFrame {
+public class SiswaForm_View extends javax.swing.JFrame {
 
     /**
      * Creates new form Siswa_View
      */
-    public Siswa_View() {
+    public SiswaForm_View() {
         initComponents();
     }
 
@@ -223,20 +223,21 @@ public class Siswa_View extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Siswa_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SiswaForm_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Siswa_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SiswaForm_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Siswa_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SiswaForm_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Siswa_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SiswaForm_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Siswa_View().setVisible(true);
+                new SiswaForm_View().setVisible(true);
             }
         });
     }

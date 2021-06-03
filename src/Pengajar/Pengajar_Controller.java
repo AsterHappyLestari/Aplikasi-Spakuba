@@ -15,13 +15,13 @@ import koneksi.Koneksi;
  * @author USER
  */
 public class Pengajar_Controller {
-    Pengajar_View view;
+    PengajarForm_View view;
     Pengajar_Model model;
     Pengajar_DAO dao;
     Connection con;
     Koneksi k;
 
-    public Pengajar_Controller(Pengajar_View view) throws ClassNotFoundException{
+    public Pengajar_Controller(PengajarForm_View view) throws ClassNotFoundException{
 
         this.view = view;
         dao = new Pengajar_DAO();

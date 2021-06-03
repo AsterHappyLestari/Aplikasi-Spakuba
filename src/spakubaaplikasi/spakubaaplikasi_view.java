@@ -38,7 +38,6 @@ public class spakubaaplikasi_view extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 255));
 
-<<<<<<< HEAD
         btnSiswa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnSiswa.setText("Siswa");
 
@@ -55,7 +54,6 @@ public class spakubaaplikasi_view extends javax.swing.JFrame {
                 btnKelasActionPerformed(evt);
             }
         });
-=======
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton1.setText("Siswa");
 
@@ -67,7 +65,6 @@ public class spakubaaplikasi_view extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton4.setText("Kelas");
->>>>>>> f5b9f233d56beca6920e6d8a65c20a6a541027b5
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         jLabel1.setText("SPAKUBA");
@@ -81,7 +78,6 @@ public class spakubaaplikasi_view extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-<<<<<<< HEAD
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(btnPengajar)
@@ -94,7 +90,6 @@ public class spakubaaplikasi_view extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(197, 197, 197)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-=======
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -106,13 +101,11 @@ public class spakubaaplikasi_view extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> f5b9f233d56beca6920e6d8a65c20a6a541027b5
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -126,7 +119,6 @@ public class spakubaaplikasi_view extends javax.swing.JFrame {
                 .addGap(59, 59, 59)
                 .addComponent(btnKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57))
-=======
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -139,9 +131,7 @@ public class spakubaaplikasi_view extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
->>>>>>> f5b9f233d56beca6920e6d8a65c20a6a541027b5
-        );
+                .addContainerGap(64, Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
