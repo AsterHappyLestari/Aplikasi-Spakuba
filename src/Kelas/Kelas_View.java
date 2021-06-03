@@ -27,21 +27,84 @@ public class Kelas_View extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
+        btnSiswa = new javax.swing.JButton();
+        btnPengajar = new javax.swing.JButton();
+        btnJadwal = new javax.swing.JButton();
+        btnKelas = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTextField1.setText("search");
+
+        btnSiswa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnSiswa.setText("Siswa");
+
+        btnPengajar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnPengajar.setText("Pengajar");
+
+        btnJadwal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnJadwal.setText("Jadwal");
+
+        btnKelas.setBackground(new java.awt.Color(153, 153, 153));
+        btnKelas.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnKelas.setText("Kelas");
+        btnKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKelasActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel1.setText("SPAKUBA");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnPengajar)
+                        .addComponent(btnSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(241, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(197, 197, 197)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(55, 55, 55)
+                .addComponent(btnSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(btnPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addComponent(btnJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+                .addComponent(btnKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
+        // TODO add your handling code here:
+        Kelas_View kelas = new Kelas_View();
+        kelas.setVisible(true);
+    }//GEN-LAST:event_btnKelasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +142,11 @@ public class Kelas_View extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnJadwal;
+    private javax.swing.JButton btnKelas;
+    private javax.swing.JButton btnPengajar;
+    private javax.swing.JButton btnSiswa;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
