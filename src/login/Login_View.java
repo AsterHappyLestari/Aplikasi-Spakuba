@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import koneksi.Koneksi;
-import spakubaaplikasi.spakubaaplikasi_view;
+//import spakubaaplikasi.spakubaaplikasi_view;
 import javax.swing.JOptionPane;
 
 /**

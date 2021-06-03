@@ -14,14 +14,16 @@ import koneksi.Koneksi;
  *
  * @author USER
  */
+
+
 public class Kelas_Controller {
-    Kelas_View view;
+    KelasForm_View view;
     Kelas_Model model;
     Kelas_DAO dao;
     Connection con;
     Koneksi k;
 
-    public Kelas_Controller(Kelas_View view) throws ClassNotFoundException{
+    public Kelas_Controller(KelasForm_View view) throws ClassNotFoundException{
 
         this.view = view;
         dao = new Kelas_DAO();
@@ -33,9 +35,9 @@ public class Kelas_Controller {
     
     public void kelas(){
         model = new Kelas_Model();
-        model.setId_kelas(view.getTxtId_kelas().getText());
-        model.setProgramkls(view.getTxtProgramkls().getText());
-        model.setHari(view.getTxtHari().getText());
+        model.setId_kelas(view.getTxtId_Kelas().getText());
+        model.setProgramkls(view.getCbProgramKelas().getSelectedItem().toString());
+        model.setHari(view.getCbHari().getSelectedItem().toString());
 
         
         try{
