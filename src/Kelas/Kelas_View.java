@@ -54,6 +54,7 @@ public class Kelas_View extends javax.swing.JFrame {
         btnJadwal.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnJadwal.setText("JADWAL");
 
+        btnKelas.setBackground(new java.awt.Color(153, 153, 153));
         btnKelas.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnKelas.setText("KELAS");
 

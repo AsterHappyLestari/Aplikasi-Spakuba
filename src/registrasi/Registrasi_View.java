@@ -243,10 +243,10 @@ public class Registrasi_View extends javax.swing.JFrame {
 
     private void ToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ToLoginActionPerformed
         // TODO add your handling code here:
-        Login_View login = new Login_View();
-        login.setVisible(true);
-        login.toFront();
-        dispose();
+//        Login_View login = new Login_View();
+//        login.setVisible(true);
+//        login.toFront();
+//        dispose();
     }//GEN-LAST:event_ToLoginActionPerformed
 
     /**

@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Pengajar;
+package spakubaaplikasi;
+import Pengajar.*;
+import Kelas.*;
 
 /**
  *
  * @author user
  */
-public class Pengajar_View extends javax.swing.JFrame {
+public class SpakubaHome_View extends javax.swing.JFrame {
 
     /**
-     * Creates new form Pengajar_View
+     * Creates new form SpakubaHome_View
      */
-    public Pengajar_View() {
+    public SpakubaHome_View() {
         initComponents();
     }
 
@@ -48,7 +50,6 @@ public class Pengajar_View extends javax.swing.JFrame {
         btnSiswa.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnSiswa.setText("SISWA");
 
-        btnPengajar.setBackground(new java.awt.Color(153, 153, 153));
         btnPengajar.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnPengajar.setText("PENGAJAR");
         btnPengajar.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +63,11 @@ public class Pengajar_View extends javax.swing.JFrame {
 
         btnKelas.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnKelas.setText("KELAS");
+        btnKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKelasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,7 +76,7 @@ public class Pengajar_View extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 312, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
                 .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addComponent(jSeparator1)
@@ -117,8 +123,20 @@ public class Pengajar_View extends javax.swing.JFrame {
 
     private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
         // TODO add your handling code here:
+        Pengajar_View pengajar = new Pengajar_View();
+        pengajar.setVisible(true);
+        pengajar.toFront();
+        dispose();
         
     }//GEN-LAST:event_btnPengajarActionPerformed
+
+    private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
+        // TODO add your handling code here:
+        Kelas_View kelas = new Kelas_View();
+        kelas.setVisible(true);
+        kelas.toFront();
+        dispose();
+    }//GEN-LAST:event_btnKelasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,20 +155,20 @@ public class Pengajar_View extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Pengajar_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SpakubaHome_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Pengajar_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SpakubaHome_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Pengajar_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SpakubaHome_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Pengajar_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SpakubaHome_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Pengajar_View().setVisible(true);
+                new SpakubaHome_View().setVisible(true);
             }
         });
     }
