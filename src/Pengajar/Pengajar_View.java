@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Pengajar;
+import Kelas.*;
 
 /**
  *
@@ -62,6 +63,11 @@ public class Pengajar_View extends javax.swing.JFrame {
 
         btnKelas.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnKelas.setText("KELAS");
+        btnKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKelasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -119,6 +125,14 @@ public class Pengajar_View extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_btnPengajarActionPerformed
+
+    private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
+        // TODO add your handling code here:
+        Kelas_View kelas = new Kelas_View();
+        kelas.setVisible(true);
+        kelas.toFront();
+        dispose();
+    }//GEN-LAST:event_btnKelasActionPerformed
 
     /**
      * @param args the command line arguments

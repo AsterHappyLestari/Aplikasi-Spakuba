@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package Kelas;
-
+import Pengajar.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author user
@@ -35,6 +37,10 @@ public class Kelas_View extends javax.swing.JFrame {
         btnPengajar = new javax.swing.JButton();
         btnJadwal = new javax.swing.JButton();
         btnKelas = new javax.swing.JButton();
+        btnForm = new javax.swing.JButton();
+        btnEnglish = new javax.swing.JButton();
+        btnNihongo = new javax.swing.JButton();
+        btnHanguk = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,6 +56,11 @@ public class Kelas_View extends javax.swing.JFrame {
 
         btnPengajar.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnPengajar.setText("PENGAJAR");
+        btnPengajar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPengajarActionPerformed(evt);
+            }
+        });
 
         btnJadwal.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnJadwal.setText("JADWAL");
@@ -57,6 +68,24 @@ public class Kelas_View extends javax.swing.JFrame {
         btnKelas.setBackground(new java.awt.Color(153, 153, 153));
         btnKelas.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnKelas.setText("KELAS");
+        btnKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKelasActionPerformed(evt);
+            }
+        });
+
+        btnForm.setText("Buat Kelas");
+        btnForm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFormActionPerformed(evt);
+            }
+        });
+
+        btnEnglish.setText("Bahasa Inggris");
+
+        btnNihongo.setText("Bahasa Jepang");
+
+        btnHanguk.setText("Bahasa Korea");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,7 +107,15 @@ public class Kelas_View extends javax.swing.JFrame {
                     .addComponent(btnKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(106, 106, 106)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnForm)
+                    .addComponent(btnNihongo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnEnglish)
+                    .addComponent(btnHanguk))
+                .addGap(137, 137, 137))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,26 +126,64 @@ public class Kelas_View extends javax.swing.JFrame {
                         .addGap(8, 8, 8)
                         .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addComponent(btnSiswa)
+                                .addGap(62, 62, 62)
+                                .addComponent(btnPengajar)
+                                .addGap(69, 69, 69)
+                                .addComponent(btnJadwal)
+                                .addGap(59, 59, 59)
+                                .addComponent(btnKelas)
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(btnSiswa)
-                        .addGap(62, 62, 62)
-                        .addComponent(btnPengajar)
-                        .addGap(69, 69, 69)
-                        .addComponent(btnJadwal)
-                        .addGap(59, 59, 59)
-                        .addComponent(btnKelas)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(162, 162, 162)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnForm)
+                            .addComponent(btnEnglish))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnNihongo)
+                            .addComponent(btnHanguk))
+                        .addGap(132, 132, 132))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnKelasActionPerformed
+
+    private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
+        // TODO add your handling code here:
+        Pengajar_View pengajar = new Pengajar_View();
+        pengajar.setVisible(true);
+        pengajar.toFront();
+        dispose();
+    }//GEN-LAST:event_btnPengajarActionPerformed
+
+    private void btnFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFormActionPerformed
+        try {
+            // TODO add your handling code here:
+            KelasForm_View form = new KelasForm_View();
+            form.setVisible(true);
+            form.toFront();
+            dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Kelas_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_btnFormActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,8 +221,12 @@ public class Kelas_View extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEnglish;
+    private javax.swing.JButton btnForm;
+    private javax.swing.JButton btnHanguk;
     private javax.swing.JButton btnJadwal;
     private javax.swing.JButton btnKelas;
+    private javax.swing.JButton btnNihongo;
     private javax.swing.JButton btnPengajar;
     private javax.swing.JButton btnSiswa;
     private javax.swing.JLabel jLabel1;
