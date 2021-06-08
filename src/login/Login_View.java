@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import koneksi.Koneksi;
-//import spakubaaplikasi.spakubaaplikasi_view;
+import spakubaaplikasi.*;
 import javax.swing.JOptionPane;
 
 /**
@@ -152,8 +152,10 @@ public class Login_View extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         try {
             if(controller.login() != null){
-//                spakubaaplikasi_view home = new spakubaaplikasi_view();
-//              home.setVisible(true);
+              SpakubaHome_View home = new SpakubaHome_View();
+              home.setVisible(true);
+              home.toFront();
+              dispose();
             }
         } catch (SQLException ex) {
             Logger.getLogger(Login_View.class.getName()).log(Level.SEVERE, null, ex);
