@@ -6,6 +6,7 @@
 package spakubaaplikasi;
 import Pengajar.*;
 import Kelas.*;
+import Siswa.SiswaForm_View;
 
 /**
  *
@@ -50,6 +51,11 @@ public class SpakubaHome_View extends javax.swing.JFrame {
 
         btnSiswa.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnSiswa.setText("SISWA");
+        btnSiswa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSiswaActionPerformed(evt);
+            }
+        });
 
         btnPengajar.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnPengajar.setText("PENGAJAR");
@@ -71,6 +77,7 @@ public class SpakubaHome_View extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Selamat Datang, Admin!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -80,7 +87,7 @@ public class SpakubaHome_View extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addComponent(jSeparator1)
@@ -94,8 +101,7 @@ public class SpakubaHome_View extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(170, 170, 170))
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 618, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,6 +154,11 @@ public class SpakubaHome_View extends javax.swing.JFrame {
         kelas.toFront();
         dispose();
     }//GEN-LAST:event_btnKelasActionPerformed
+
+    private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnSiswaActionPerformed
 
     /**
      * @param args the command line arguments
