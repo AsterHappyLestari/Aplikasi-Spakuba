@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Siswa;
+<<<<<<< HEAD
 
 import Kelas.Kelas_View;
 import Pengajar.PengajarForm_View;
@@ -11,6 +12,10 @@ import Pengajar.Pengajar_View;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+=======
+import java.util.logging.Level;
+import java.util.logging.Logger;
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
 /**
  *
  * @author user
@@ -33,18 +38,58 @@ public class Siswa_View extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txtSearch = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
+=======
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
         btnSiswa = new javax.swing.JButton();
         btnPengajar = new javax.swing.JButton();
         btnJadwal = new javax.swing.JButton();
         btnKelas = new javax.swing.JButton();
+<<<<<<< HEAD
         jButton1 = new javax.swing.JButton();
+=======
+        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        btnRegristrasi = new javax.swing.JButton();
+        btnData = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(884, 587));
+
+        btnSiswa.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnSiswa.setText("SISWA");
+
+        btnPengajar.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnPengajar.setText("PENGAJAR");
+
+        btnJadwal.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnJadwal.setText("JADWAL");
+
+        btnKelas.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnKelas.setText("KELAS");
+
+        jTextField1.setText("search..");
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        jLabel1.setText("SPAKUBA");
+
+        btnRegristrasi.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnRegristrasi.setText("REGISTRASI");
+        btnRegristrasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegristrasiActionPerformed(evt);
+            }
+        });
+
+        btnData.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnData.setText("DATA SISWA");
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton2.setText("Data Siswa");
@@ -92,6 +137,7 @@ public class Siswa_View extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGap(36, 36, 36)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -112,10 +158,31 @@ public class Siswa_View extends javax.swing.JFrame {
                 .addGap(138, 138, 138)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(62, 62, 62))
+=======
+                .addGap(31, 31, 31)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnKelas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPengajar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSiswa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnJadwal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
+                .addComponent(btnRegristrasi)
+                .addGap(164, 164, 164)
+                .addComponent(btnData)
+                .addGap(70, 70, 70))
+            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -145,11 +212,32 @@ public class Siswa_View extends javax.swing.JFrame {
                                     .addComponent(jButton1)
                                     .addComponent(jButton2))))
                         .addGap(0, 0, Short.MAX_VALUE))))
+=======
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(btnSiswa)
+                .addGap(58, 58, 58)
+                .addComponent(btnPengajar)
+                .addGap(65, 65, 65)
+                .addComponent(btnJadwal)
+                .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnData)
+                    .addComponent(btnRegristrasi)
+                    .addComponent(btnKelas))
+                .addContainerGap(129, Short.MAX_VALUE))
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
         // TODO add your handling code here:
 
@@ -164,11 +252,19 @@ public class Siswa_View extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKelasActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+=======
+    private void btnRegristrasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegristrasiActionPerformed
+        // TODO add your handling code here:
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
         SiswaForm_View siswa = new SiswaForm_View();
         siswa.setVisible(true);
         siswa.toFront();
         dispose();
+<<<<<<< HEAD
     }//GEN-LAST:event_jButton1ActionPerformed
+=======
+    }//GEN-LAST:event_btnRegristrasiActionPerformed
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
 
     /**
      * @param args the command line arguments
@@ -206,6 +302,7 @@ public class Siswa_View extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JButton btnJadwal;
     private javax.swing.JButton btnKelas;
     private javax.swing.JButton btnPengajar;
@@ -216,5 +313,16 @@ public class Siswa_View extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTextField txtSearch;
+=======
+    private javax.swing.JButton btnData;
+    private javax.swing.JButton btnJadwal;
+    private javax.swing.JButton btnKelas;
+    private javax.swing.JButton btnPengajar;
+    private javax.swing.JButton btnRegristrasi;
+    private javax.swing.JButton btnSiswa;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField jTextField1;
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
     // End of variables declaration//GEN-END:variables
 }
