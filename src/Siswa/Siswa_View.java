@@ -4,11 +4,24 @@
  * and open the template in the editor.
  */
 package Siswa;
+<<<<<<< HEAD
 import Kelas.*;
 import Pengajar.*;
 import Jadwal.*;
+=======
+<<<<<<< HEAD
+
+import Kelas.Kelas_View;
+import Pengajar.PengajarForm_View;
+import Pengajar.Pengajar_View;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+=======
+>>>>>>> c10384177c191b5f2960620b287ae45e7b4213c0
+import java.util.logging.Level;
+import java.util.logging.Logger;
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
 /**
  *
  * @author user
@@ -31,15 +44,27 @@ public class Siswa_View extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txtSearch = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+=======
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
         btnSiswa = new javax.swing.JButton();
         btnPengajar = new javax.swing.JButton();
         btnJadwal = new javax.swing.JButton();
         btnKelas = new javax.swing.JButton();
+<<<<<<< HEAD
+        jButton1 = new javax.swing.JButton();
+=======
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btnRegristrasi = new javax.swing.JButton();
         btnData = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(884, 587));
@@ -92,11 +117,74 @@ public class Siswa_View extends javax.swing.JFrame {
         btnData.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnData.setText("DATA SISWA");
 
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jButton2.setText("Data Siswa");
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        jLabel1.setText("SPAKUBA");
+
+        txtSearch.setText("Search...");
+
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        btnSiswa.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnSiswa.setText("SISWA");
+
+        btnPengajar.setBackground(new java.awt.Color(153, 153, 153));
+        btnPengajar.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnPengajar.setText("PENGAJAR");
+        btnPengajar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPengajarActionPerformed(evt);
+            }
+        });
+
+        btnJadwal.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnJadwal.setText("JADWAL");
+
+        btnKelas.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnKelas.setText("KELAS");
+        btnKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKelasActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jButton1.setText("Registrasi");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addGap(36, 36, 36)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addComponent(jSeparator1)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnJadwal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(138, 138, 138)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62))
+=======
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -115,10 +203,42 @@ public class Siswa_View extends javax.swing.JFrame {
                 .addComponent(btnData)
                 .addGap(70, 70, 70))
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addComponent(btnSiswa)
+                                .addGap(62, 62, 62)
+                                .addComponent(btnPengajar)
+                                .addGap(69, 69, 69)
+                                .addComponent(btnJadwal)
+                                .addGap(59, 59, 59)
+                                .addComponent(btnKelas))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(216, 216, 216)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButton1)
+                                    .addComponent(jButton2))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+=======
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -137,18 +257,40 @@ public class Siswa_View extends javax.swing.JFrame {
                     .addComponent(btnRegristrasi)
                     .addComponent(btnKelas))
                 .addContainerGap(129, Short.MAX_VALUE))
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+    private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_btnPengajarActionPerformed
+
+    private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
+        // TODO add your handling code here:
+        Kelas_View kelas = new Kelas_View();
+        kelas.setVisible(true);
+        kelas.toFront();
+        dispose();
+    }//GEN-LAST:event_btnKelasActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+=======
     private void btnRegristrasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegristrasiActionPerformed
         // TODO add your handling code here:
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
         SiswaForm_View siswa = new SiswaForm_View();
         siswa.setVisible(true);
         siswa.toFront();
         dispose();
+<<<<<<< HEAD
+    }//GEN-LAST:event_jButton1ActionPerformed
+=======
     }//GEN-LAST:event_btnRegristrasiActionPerformed
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
 
     private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
         // TODO add your handling code here:
@@ -215,6 +357,18 @@ public class Siswa_View extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+    private javax.swing.JButton btnJadwal;
+    private javax.swing.JButton btnKelas;
+    private javax.swing.JButton btnPengajar;
+    private javax.swing.JButton btnSiswa;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField txtSearch;
+=======
     private javax.swing.JButton btnData;
     private javax.swing.JButton btnJadwal;
     private javax.swing.JButton btnKelas;
@@ -224,5 +378,6 @@ public class Siswa_View extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
+>>>>>>> a5bf2e6bf56c71448b90d5c3a02791b1b736843e
     // End of variables declaration//GEN-END:variables
 }

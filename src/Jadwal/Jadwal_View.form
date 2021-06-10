@@ -23,12 +23,20 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+=======
+          <EmptySpace min="0" pref="836" max="32767" attributes="0"/>
+>>>>>>> c10384177c191b5f2960620b287ae45e7b4213c0
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+=======
+          <EmptySpace min="0" pref="506" max="32767" attributes="0"/>
+>>>>>>> c10384177c191b5f2960620b287ae45e7b4213c0
       </Group>
     </DimensionLayout>
   </Layout>

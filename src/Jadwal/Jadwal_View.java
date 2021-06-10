@@ -7,7 +7,11 @@ package Jadwal;
 
 /**
  *
+<<<<<<< HEAD
  * @author USER
+=======
+ * @author user
+>>>>>>> c10384177c191b5f2960620b287ae45e7b4213c0
  */
 public class Jadwal_View extends javax.swing.JFrame {
 
@@ -33,11 +37,19 @@ public class Jadwal_View extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
+=======
+            .addGap(0, 836, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 506, Short.MAX_VALUE)
+>>>>>>> c10384177c191b5f2960620b287ae45e7b4213c0
         );
 
         pack();
