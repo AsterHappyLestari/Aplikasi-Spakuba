@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package Siswa;
+import Kelas.*;
+import Pengajar.*;
+import Jadwal.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -43,15 +46,35 @@ public class Siswa_View extends javax.swing.JFrame {
 
         btnSiswa.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnSiswa.setText("SISWA");
+        btnSiswa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSiswaActionPerformed(evt);
+            }
+        });
 
         btnPengajar.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnPengajar.setText("PENGAJAR");
+        btnPengajar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPengajarActionPerformed(evt);
+            }
+        });
 
         btnJadwal.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnJadwal.setText("JADWAL");
+        btnJadwal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJadwalActionPerformed(evt);
+            }
+        });
 
         btnKelas.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnKelas.setText("KELAS");
+        btnKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKelasActionPerformed(evt);
+            }
+        });
 
         jTextField1.setText("search..");
 
@@ -126,6 +149,35 @@ public class Siswa_View extends javax.swing.JFrame {
         siswa.toFront();
         dispose();
     }//GEN-LAST:event_btnRegristrasiActionPerformed
+
+    private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSiswaActionPerformed
+
+    private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
+        // TODO add your handling code here:
+      
+            Pengajar_View pengajar = new Pengajar_View();
+            pengajar.setVisible(true);
+            pengajar.toFront();
+            dispose(); 
+    }//GEN-LAST:event_btnPengajarActionPerformed
+
+    private void btnJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJadwalActionPerformed
+        // TODO add your handling code here:
+        Jadwal_View jadwal = new Jadwal_View();
+        jadwal.setVisible(true);
+        jadwal.toFront();
+        dispose();
+    }//GEN-LAST:event_btnJadwalActionPerformed
+
+    private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
+        // TODO add your handling code here:
+        Kelas_View kelas = new Kelas_View();
+        kelas.setVisible(true);
+        kelas.toFront();
+        dispose();
+    }//GEN-LAST:event_btnKelasActionPerformed
 
     /**
      * @param args the command line arguments

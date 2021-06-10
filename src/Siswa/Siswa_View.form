@@ -85,6 +85,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SISWA"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSiswaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnPengajar">
       <Properties>
@@ -93,6 +96,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="PENGAJAR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPengajarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnJadwal">
       <Properties>
@@ -101,6 +107,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="JADWAL"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnJadwalActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnKelas">
       <Properties>
@@ -109,6 +118,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="KELAS"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKelasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField1">
       <Properties>
