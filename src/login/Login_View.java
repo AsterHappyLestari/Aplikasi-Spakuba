@@ -11,6 +11,7 @@ import Model.Admin_Model;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import koneksi.Koneksi;
 import spakubaaplikasi.*;
 import javax.swing.JOptionPane;
@@ -27,6 +28,7 @@ public class Login_View extends javax.swing.JFrame {
     Login_Controller controller;
     public Login_View() {
         initComponents();
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         controller = new Login_Controller(this);
     }
 
@@ -61,7 +63,9 @@ public class Login_View extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SPAKUBA");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         txtUsername.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
@@ -152,10 +156,10 @@ public class Login_View extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         try {
             if(controller.login() != null){
-              SpakubaHome_View home = new SpakubaHome_View();
-              home.setVisible(true);
-              home.toFront();
-              dispose();
+                SpakubaHome_View home = new SpakubaHome_View();
+                home.setVisible(true);
+                home.toFront();
+                dispose();
             }
         } catch (SQLException ex) {
             Logger.getLogger(Login_View.class.getName()).log(Level.SEVERE, null, ex);
