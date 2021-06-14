@@ -47,4 +47,9 @@ public class Siswa_Controller {
             javax.swing.JOptionPane.showMessageDialog(null, "Error"+ex.getMessage());
         }
     }
+    
+    public void onClickTable(){
+        int index = view.geTabelSiswa().getSelectedRow();
+        
+    }
 }
