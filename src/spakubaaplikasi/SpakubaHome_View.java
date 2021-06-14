@@ -8,7 +8,7 @@ import Pengajar.*;
 import Kelas.*;
 import Siswa.*;
 import Siswa.SiswaForm_View;
-import Siswa.Siswa_View;
+//import Siswa.Siswa_View;
 import javax.swing.JFrame;
 
 /**
@@ -161,9 +161,9 @@ public class SpakubaHome_View extends javax.swing.JFrame {
 
     private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
         // TODO add your handling code here:
-        Siswa_View siswa = new Siswa_View();
-        siswa.setVisible(true);
-        siswa.toFront();
+//        Siswa_View siswa = new Siswa_View();
+  //      siswa.setVisible(true);
+    //    siswa.toFront();
         dispose();
     }//GEN-LAST:event_btnSiswaActionPerformed
 
