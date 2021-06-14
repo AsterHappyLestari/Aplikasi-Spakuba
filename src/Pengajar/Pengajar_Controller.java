@@ -8,6 +8,7 @@ package Pengajar;
 import DAO.Pengajar_DAO;
 import Model.Pengajar_Model;
 import java.sql.Connection;
+import javax.swing.table.DefaultTableModel;
 import koneksi.Koneksi;
 
 /**
@@ -16,6 +17,7 @@ import koneksi.Koneksi;
  */
 public class Pengajar_Controller {
     PengajarForm_View view;
+    PengajarTabel_View tabel;
     Pengajar_Model model;
     Pengajar_DAO dao;
     Connection con;
@@ -31,7 +33,7 @@ public class Pengajar_Controller {
 
     
     
-    public void admin(){
+    public void pengajar(){
         model = new Pengajar_Model();
         model.setId_pengajar(view.getTxtId_pengajar().getText());
         model.setNamapengajar(view.getTxtNamapengajar().getText());
@@ -44,6 +46,39 @@ public class Pengajar_Controller {
             javax.swing.JOptionPane.showMessageDialog(null, "Register Berhasil");
         }catch(Exception ex){
             javax.swing.JOptionPane.showMessageDialog(null, "Error"+ex.getMessage());
+        }
+    }
+    
+//    public void onClickTable(){
+//        int index = tabel.getTabel().getSelectedRow();
+//        
+//        .get).setText(model.getNobp());
+//        view.getTxtNama().setText(model.getNama());
+//        view.getTxtTahun().setText(model.getThnajar());
+//        if(model.getSemester().equals("Genap")){
+//            view.getRbGenap().setSelected(true);
+//        }
+//        else if(model.getSemester().equals("Ganjil")){
+//            view.getRbGanjil().setSelected(true);
+//        }
+//        view.getCmbJurusan().setSelectedItem(model.getJurusan());
+//        view.getCmbProdi().setSelectedItem(model.getProdi());
+//        view.getCmbBayar().setSelectedItem(model.getJnsbayar());
+//        view.getTxtJumlah().setText(model.getJumlah());
+//    }
+    
+    public void viewTable(){
+        DefaultTableModel tableModel = (DefaultTableModel)tabel.getTabel().getModel();
+        tableModel.setRowCount(0);
+        for(Pengajar_Model s : dao.getData()){
+            Object[] d={
+                s.getId_pengajar(),
+                s.getNamapengajar(),
+                s.getEmail(),
+                s.getNotelppengajar(),
+                s.getAlamatpengajar(),
+            };
+            tableModel.addRow(d);
         }
     }
 }
