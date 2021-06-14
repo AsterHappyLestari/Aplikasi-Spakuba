@@ -10,6 +10,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import koneksi.Koneksi;
 
 /**
@@ -19,6 +21,8 @@ import koneksi.Koneksi;
 public class Pengajar_DAO {
      Connection con;
    
+     private List <Pengajar_Model> data = new ArrayList<Pengajar_Model>();
+     
    public Pengajar_DAO(){
        Koneksi k = new Koneksi();
        con = k.getConnection();
@@ -67,5 +71,9 @@ public class Pengajar_DAO {
            pengajar.setAlamatpengajar(rs.getString(4));
        }
        return pengajar;
-   } 
+   }
+   
+   public List<Pengajar_Model> getData(){
+        return data;
+    }
 }
