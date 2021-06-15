@@ -7,6 +7,7 @@ package spakubaaplikasi;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import login.Login_View;
 import registrasi.Registrasi_View;
 
@@ -21,6 +22,8 @@ public class HomeAwal_View extends javax.swing.JFrame {
      */
     public HomeAwal_View() {
         initComponents();
+        setLocationRelativeTo(this);
+         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -32,65 +35,47 @@ public class HomeAwal_View extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         btnRegister = new javax.swing.JButton();
         btnLogin = new javax.swing.JButton();
 
-        jLabel4.setText("jLabel1");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SPAKUBA");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel1.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-2, 160, 900, 71);
 
         btnRegister.setBackground(new java.awt.Color(102, 102, 255));
         btnRegister.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnRegister.setForeground(new java.awt.Color(51, 51, 51));
         btnRegister.setText("Sign Up");
+        btnRegister.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegisterActionPerformed(evt);
             }
         });
+        getContentPane().add(btnRegister);
+        btnRegister.setBounds(510, 360, 211, 47);
 
         btnLogin.setBackground(new java.awt.Color(102, 102, 255));
         btnLogin.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(51, 51, 51));
         btnLogin.setText("Sign In");
+        btnLogin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(245, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(270, 270, 270))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnLogin)
-                        .addGap(117, 117, 117)
-                        .addComponent(btnRegister)
-                        .addGap(216, 216, 216))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(jLabel1)
-                .addGap(76, 76, 76)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRegister)
-                    .addComponent(btnLogin))
-                .addContainerGap(200, Short.MAX_VALUE))
-        );
+        getContentPane().add(btnLogin);
+        btnLogin.setBounds(160, 360, 211, 47);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -154,6 +139,5 @@ public class HomeAwal_View extends javax.swing.JFrame {
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnRegister;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
