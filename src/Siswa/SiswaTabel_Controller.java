@@ -38,7 +38,7 @@ public class SiswaTabel_Controller {
         try{
         DefaultTableModel tableModel = (DefaultTableModel)view.getTabel().getModel();
         tableModel.setRowCount(0);
-        ResultSet rs = k.getQuery(con, "SELECT id_pengajar, namapengajar, email, notelppengajar, alamatpengajar from pengajar");
+        ResultSet rs = k.getQuery(con, "SELECT * from siswa");
         
         while(rs.next()){
             Object data[] = {
