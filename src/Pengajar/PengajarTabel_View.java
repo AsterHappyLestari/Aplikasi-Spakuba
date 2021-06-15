@@ -6,6 +6,9 @@
 package Pengajar;
 
 import Kelas.Kelas_View;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JTable;
 
 /**
@@ -17,8 +20,11 @@ public class PengajarTabel_View extends javax.swing.JFrame {
     /**
      * Creates new form PengajarTabel_View
      */
-    public PengajarTabel_View() {
+    PengajarTabel_Controller controller;
+    
+    public PengajarTabel_View() throws ClassNotFoundException {
         initComponents();
+        controller = new PengajarTabel_Controller(this);
     }
 
     public JTable getTabel() {
@@ -108,6 +114,27 @@ public class PengajarTabel_View extends javax.swing.JFrame {
                 "Id Pengajar", "Nama Pengajar", "E-mail", "No Telp", "Alamat"
             }
         ));
+        Tabel.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                TabelComponentAdded(evt);
+            }
+        });
+        Tabel.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                TabelAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        Tabel.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                TabelInputMethodTextChanged(evt);
+            }
+        });
         jScrollPane1.setViewportView(Tabel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -172,6 +199,10 @@ public class PengajarTabel_View extends javax.swing.JFrame {
 
     private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
         // TODO add your handling code here:
+        Pengajar_View pengajar = new Pengajar_View();
+        pengajar.setVisible(true);
+        pengajar.toFront();
+        dispose();
 
     }//GEN-LAST:event_btnPengajarActionPerformed
 
@@ -182,6 +213,34 @@ public class PengajarTabel_View extends javax.swing.JFrame {
         kelas.toFront();
         dispose();
     }//GEN-LAST:event_btnKelasActionPerformed
+
+    private void TabelInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_TabelInputMethodTextChanged
+////        try {
+////            // TODO add your handling code here:
+////            controller.viewTable();
+////        } catch (SQLException ex) {
+////            Logger.getLogger(PengajarTabel_View.class.getName()).log(Level.SEVERE, null, ex);
+////        }
+    }//GEN-LAST:event_TabelInputMethodTextChanged
+
+    private void TabelComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_TabelComponentAdded
+//        try {
+//            // TODO add your handling code here:
+//            controller.viewTable();
+//        } catch (SQLException ex) {
+//            Logger.getLogger(PengajarTabel_View.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+    }//GEN-LAST:event_TabelComponentAdded
+
+    private void TabelAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_TabelAncestorAdded
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            controller.viewTable();
+        } catch (SQLException ex) {
+            Logger.getLogger(PengajarTabel_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_TabelAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -213,7 +272,11 @@ public class PengajarTabel_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PengajarTabel_View().setVisible(true);
+                try {
+                    new PengajarTabel_View().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(PengajarTabel_View.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

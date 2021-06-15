@@ -17,7 +17,6 @@ import koneksi.Koneksi;
  */
 public class Pengajar_Controller {
     PengajarForm_View view;
-    PengajarTabel_View tabel;
     Pengajar_Model model;
     Pengajar_DAO dao;
     Connection con;
@@ -67,18 +66,5 @@ public class Pengajar_Controller {
 //        view.getTxtJumlah().setText(model.getJumlah());
 //    }
     
-    public void viewTable(){
-        DefaultTableModel tableModel = (DefaultTableModel)tabel.getTabel().getModel();
-        tableModel.setRowCount(0);
-        for(Pengajar_Model s : dao.getData()){
-            Object[] d={
-                s.getId_pengajar(),
-                s.getNamapengajar(),
-                s.getEmail(),
-                s.getNotelppengajar(),
-                s.getAlamatpengajar(),
-            };
-            tableModel.addRow(d);
-        }
-    }
+    
 }

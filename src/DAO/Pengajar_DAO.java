@@ -68,7 +68,7 @@ public class Pengajar_DAO {
            pengajar.setNamapengajar(rs.getString(2));
            pengajar.setEmail(rs.getString(3));
            pengajar.setNotelppengajar(rs.getString(4));
-           pengajar.setAlamatpengajar(rs.getString(4));
+           pengajar.setAlamatpengajar(rs.getString(5));
        }
        return pengajar;
    }

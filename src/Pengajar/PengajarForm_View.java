@@ -200,6 +200,10 @@ public class PengajarForm_View extends javax.swing.JFrame {
     private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
         // TODO add your handling code here:
         controller.pengajar();
+        Pengajar_View pengajar = new Pengajar_View();
+        pengajar.setVisible(true);
+        pengajar.toFront();
+        dispose();
     }//GEN-LAST:event_btnSimpanActionPerformed
 
     /**

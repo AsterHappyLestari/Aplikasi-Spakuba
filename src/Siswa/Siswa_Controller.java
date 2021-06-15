@@ -48,8 +48,8 @@ public class Siswa_Controller {
         }
     }
     
-    public void onClickTable(){
-        int index = view.geTabelSiswa().getSelectedRow();
-        
-    }
+//    public void onClickTable(){
+//        int index = view.geTabelSiswa().getSelectedRow();
+//        
+//    }
 }

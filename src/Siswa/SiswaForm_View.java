@@ -259,4 +259,8 @@ public class SiswaForm_View extends javax.swing.JFrame {
     private javax.swing.JTextField txtNotelpsiswa;
     private javax.swing.JTextField txtTtl;
     // End of variables declaration//GEN-END:variables
+
+    Object geTabelSiswa() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 package Siswa;
-import Pengajar.*;
 import Kelas.*;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JTable;
 
 /**
  *
@@ -19,9 +20,15 @@ public class SiswaTabel_View extends javax.swing.JFrame {
     /**
      * Creates new form Pengajar_View
      */
-    public SiswaTabel_View() {
+    SiswaTabel_Controller c;
+    public SiswaTabel_View() throws ClassNotFoundException {
         initComponents();
+        c = new SiswaTabel_Controller(this);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    }
+
+    public JTable getTabel() {
+        return Tabel;
     }
 
     /**
@@ -43,7 +50,7 @@ public class SiswaTabel_View extends javax.swing.JFrame {
         btnKelas = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTabelSiswa = new javax.swing.JTable();
+        Tabel = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,8 +87,8 @@ public class SiswaTabel_View extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel2.setText("Data Siswa");
 
-        jTabelSiswa.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jTabelSiswa.setModel(new javax.swing.table.DefaultTableModel(
+        Tabel.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Tabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -92,7 +99,16 @@ public class SiswaTabel_View extends javax.swing.JFrame {
                 "Id Siswa", "Nama Lengkap", "TTL", "No Telp", "Alamat", "Id Kelas"
             }
         ));
-        jScrollPane2.setViewportView(jTabelSiswa);
+        Tabel.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                TabelAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jScrollPane2.setViewportView(Tabel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,7 +133,6 @@ public class SiswaTabel_View extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addGap(378, 378, 378))
                     .addComponent(jScrollPane2)))
@@ -149,7 +164,7 @@ public class SiswaTabel_View extends javax.swing.JFrame {
                                 .addGap(29, 29, 29)
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -171,6 +186,15 @@ public class SiswaTabel_View extends javax.swing.JFrame {
         kelas.toFront();
         dispose();
     }//GEN-LAST:event_btnKelasActionPerformed
+
+    private void TabelAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_TabelAncestorAdded
+        try {
+            // TODO add your handling code here:
+            c.viewTable();
+        } catch (SQLException ex) {
+            Logger.getLogger(SiswaTabel_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_TabelAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -203,12 +227,17 @@ public class SiswaTabel_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SiswaTabel_View().setVisible(true);
+                try {
+                    new SiswaTabel_View().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(SiswaTabel_View.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable Tabel;
     private javax.swing.JButton btnJadwal;
     private javax.swing.JButton btnKelas;
     private javax.swing.JButton btnPengajar;
@@ -218,7 +247,6 @@ public class SiswaTabel_View extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTable jTabelSiswa;
     private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
 }
