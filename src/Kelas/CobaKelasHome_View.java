@@ -7,6 +7,8 @@ package Kelas;
 
 import Pengajar.CobaPengajarHome_View;
 import Siswa.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 /**
@@ -485,7 +487,12 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
 
     private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
         // TODO add your handling code here:
-        CobaSiswaHome_View sishome = new CobaSiswaHome_View();
+        CobaSiswaHome_View sishome = null;
+        try {
+            sishome = new CobaSiswaHome_View();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaKelasHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
         sishome.setVisible(true);
         sishome.toFront();
         dispose();
