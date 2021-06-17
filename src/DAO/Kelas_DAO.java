@@ -24,19 +24,21 @@ public class Kelas_DAO {
     }
     
     public void insert(Connection con, Kelas_Model kelas) throws SQLException{
-       String sql = "insert into kelas values(?,?,?)";
+       String sql = "insert into kelas values(?,?,?,?)";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, kelas.getId_kelas());
-       ps.setString(2, kelas.getProgramkls());
-       ps.setString(3, kelas.getHari());
+       ps.setString(2, kelas.getNamaSiswa());
+       ps.setString(3, kelas.getProgramkls());
+       ps.setString(4, kelas.getHari());
    }
    public static void update(Connection con, Kelas_Model kelas) throws SQLException{
-       String sql = "update kelas set programkls=?, hari=?"
+       String sql = "update kelas set NamaSiswa=?, programkls=?, hari=?"
                +"where id_kelas=?";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, kelas.getId_kelas());
-       ps.setString(2, kelas.getProgramkls());
-       ps.setString(3, kelas.getHari());
+       ps.setString(2, kelas.getNamaSiswa());
+       ps.setString(3, kelas.getProgramkls());
+       ps.setString(4, kelas.getHari());
        ps.executeUpdate();
    }
    public static void delete(Connection con, Kelas_Model kelas) throws SQLException{
@@ -55,8 +57,9 @@ public class Kelas_DAO {
        while(rs.next()){
            kelas = new Kelas_Model();
            kelas.setId_kelas(rs.getString(1));
-           kelas.setProgramkls(rs.getString(2));
-           kelas.setHari(rs.getString(3));
+           kelas.setNamaSiswa(rs.getString(2));
+           kelas.setProgramkls(rs.getString(3));
+           kelas.setHari(rs.getString(4));
        }
        return kelas;
    }

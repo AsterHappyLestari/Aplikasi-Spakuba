@@ -11,6 +11,7 @@ package Model;
  */
 public class Kelas_Model {
     private String id_kelas;
+    private String NamaSiswa;
     private String programkls;
     private String hari;
 
@@ -22,6 +23,15 @@ public class Kelas_Model {
         this.id_kelas = id_kelas;
     }
 
+    public String getNamaSiswa() {
+        return NamaSiswa;
+    }
+
+    public void setNamaSiswa(String NamaSiswa) {
+        this.NamaSiswa = NamaSiswa;
+    }
+    
+    
     public String getProgramkls() {
         return programkls;
     }

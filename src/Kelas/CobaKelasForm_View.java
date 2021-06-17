@@ -6,7 +6,12 @@
 package Kelas;
 
 import Siswa.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JTextField;
 
 /**
  *
@@ -17,10 +22,53 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
     /**
      * Creates new form CobaHome_View
      */
-    public CobaKelasForm_View() {
+    Kelas_Controller c;
+    public CobaKelasForm_View() throws ClassNotFoundException {
         initComponents();
+        c = new Kelas_Controller(this);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
+
+    public JButton getBtnExit() {
+        return btnExit;
+    }
+
+    public JButton getBtnJadwal() {
+        return btnJadwal;
+    }
+
+    public JButton getBtnKelas() {
+        return btnKelas;
+    }
+
+    public JButton getBtnPengajar() {
+        return btnPengajar;
+    }
+
+    public JButton getBtnSimpan() {
+        return btnSimpan;
+    }
+
+    public JButton getBtnSiswa() {
+        return btnSiswa;
+    }
+
+    public JComboBox<String> getCbHari() {
+        return cbHari;
+    }
+
+    public JComboBox<String> getCbProgramkls() {
+        return cbProgramkls;
+    }
+
+    public JTextField getTxtId_kelas() {
+        return txtId_kelas;
+    }
+
+    public JTextField getTxtNamaSiswa() {
+        return txtNamaSiswa;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -55,12 +103,14 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtId_kelas = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        btnSimpan = new javax.swing.JButton();
+        cbHari = new javax.swing.JComboBox<>();
+        cbProgramkls = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
+        txtNamaSiswa = new javax.swing.JTextField();
         jPanel12 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -282,7 +332,7 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel5.setText("Id Siswa");
 
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtId_kelas.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel6.setText("Program Kelas");
@@ -290,16 +340,21 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel7.setText("Hari");
 
-        jButton1.setBackground(new java.awt.Color(0, 204, 204));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/save.png"))); // NOI18N
-        jButton1.setText("SIMPAN");
+        btnSimpan.setBackground(new java.awt.Color(0, 204, 204));
+        btnSimpan.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnSimpan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/save.png"))); // NOI18N
+        btnSimpan.setText("SIMPAN");
 
-        jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Hari", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu" }));
+        cbHari.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        cbHari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Hari", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu" }));
 
-        jComboBox2.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Bahasa", "Bahasa Inggris", "Bahasa Jepang", "Bahasa Korea" }));
+        cbProgramkls.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        cbProgramkls.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Bahasa", "Bahasa Inggris", "Bahasa Jepang", "Bahasa Korea" }));
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel8.setText("Nama Siswa");
+
+        txtNamaSiswa.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -309,18 +364,20 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(btnSimpan))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(111, 111, 111)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel8))
                         .addGap(32, 32, 32)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox2, 0, 250, Short.MAX_VALUE))))
+                            .addComponent(txtId_kelas)
+                            .addComponent(cbHari, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbProgramkls, 0, 250, Short.MAX_VALUE)
+                            .addComponent(txtNamaSiswa))))
                 .addGap(48, 48, 48))
         );
         jPanel11Layout.setVerticalGroup(
@@ -329,17 +386,22 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
                 .addGap(106, 106, 106)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
+                    .addComponent(txtId_kelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel8)
+                    .addComponent(txtNamaSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cbHari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbProgramkls, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel7)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnSimpan)
                 .addContainerGap())
         );
 
@@ -499,7 +561,11 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CobaKelasForm_View().setVisible(true);
+                try {
+                    new CobaKelasForm_View().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(CobaKelasForm_View.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -509,10 +575,10 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
     private javax.swing.JButton btnJadwal;
     private javax.swing.JButton btnKelas;
     private javax.swing.JButton btnPengajar;
+    private javax.swing.JButton btnSimpan;
     private javax.swing.JButton btnSiswa;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> cbHari;
+    private javax.swing.JComboBox<String> cbProgramkls;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -520,6 +586,7 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -535,6 +602,7 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField txtId_kelas;
+    private javax.swing.JTextField txtNamaSiswa;
     // End of variables declaration//GEN-END:variables
 }

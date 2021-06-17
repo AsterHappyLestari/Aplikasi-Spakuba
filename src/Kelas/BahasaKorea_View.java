@@ -236,7 +236,7 @@ public class BahasaKorea_View extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Data Kelas Bahasa Inggris");
+        jLabel6.setText("Data Kelas Bahasa Korea");
 
         jTable1.setBackground(new java.awt.Color(0, 204, 204));
         jTable1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
