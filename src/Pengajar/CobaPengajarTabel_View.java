@@ -5,6 +5,7 @@
  */
 package Pengajar;
 
+import Jadwal.JadwalHome_View;
 import Kelas.*;
 import Siswa.*;
 import java.util.logging.Level;
@@ -12,6 +13,7 @@ import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTable;
+import spakubaaplikasi.CobaAwal_View;
 
 /**
  *
@@ -462,6 +464,10 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
 
     private void btnJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJadwalActionPerformed
         // TODO add your handling code here:
+        JadwalHome_View kelashome = new JadwalHome_View();
+        kelashome.setVisible(true);
+        kelashome.toFront();
+        dispose();
     }//GEN-LAST:event_btnJadwalActionPerformed
 
     private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
@@ -474,6 +480,10 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
+        CobaAwal_View awal = new CobaAwal_View();
+        awal.setVisible(true);
+        awal.toFront();
+        dispose();
     }//GEN-LAST:event_btnExitActionPerformed
 
     /**
