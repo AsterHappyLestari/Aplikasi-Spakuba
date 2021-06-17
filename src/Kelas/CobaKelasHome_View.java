@@ -68,6 +68,8 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
 
         jScrollPane2.setPreferredSize(new java.awt.Dimension(1314, 981));
 
+        jPanel11.setBackground(new java.awt.Color(0, 0, 0));
+
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setPreferredSize(new java.awt.Dimension(245, 828));
 
