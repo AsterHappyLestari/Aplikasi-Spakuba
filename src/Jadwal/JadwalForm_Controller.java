@@ -41,7 +41,7 @@ public class JadwalForm_Controller {
         
         try{
             dao.insert(con, model);
-            javax.swing.JOptionPane.showMessageDialog(null, "Register Berhasil");
+            javax.swing.JOptionPane.showMessageDialog(null, "Input Berhasil");
         }catch(Exception ex){
             javax.swing.JOptionPane.showMessageDialog(null, "Error"+ex.getMessage());
         }
