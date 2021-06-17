@@ -49,21 +49,7 @@ public class CobaSiswaHome_Controller {
 //            System.out.print(ex.toString());
 //        }
 //    }
-
-      public void previewrapor_siswa(){
-        HashMap parameter = new HashMap();
-        JasperPrint jasperPrint = null;
-        try {
-            jasperPrint = JasperFillManager.fillReport("report/rapor_siswa.jasper", parameter, con);
-            JasperViewer.viewReport(jasperPrint, false);
-        } catch (Exception ex) {
-            System.out.print(ex.toString());
-        }
-    }
-
-}
-    
-//    public void siswa(){
+//public void siswa(){
 //        model = new Siswa_Model();
 //        model.setId_siswa(view.getTxtId_siswa().getText());
 //        model.setNamasiswa(view.getTxtNama_siswa().getText());
@@ -78,6 +64,20 @@ public class CobaSiswaHome_Controller {
 //        }catch(Exception ex){
 //            javax.swing.JOptionPane.showMessageDialog(null, "Error"+ex.getMessage());
 //        }
-//        
+//}
+      public void previewrapor_siswa(){
+        HashMap parameter = new HashMap();
+        JasperPrint jasperPrint = null;
+        try {
+            jasperPrint = JasperFillManager.fillReport("report/rapor_siswa.jasper", parameter, con);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (Exception ex) {
+            System.out.print(ex.toString());
+        }
+    }
+
+}
+    
+    
        
 

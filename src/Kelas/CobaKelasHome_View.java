@@ -9,6 +9,7 @@ import Pengajar.CobaPengajarHome_View;
 import Siswa.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
@@ -25,6 +26,38 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
+    public JButton getBtnExit() {
+        return btnExit;
+    }
+
+    public JButton getBtnInggris() {
+        return btnInggris;
+    }
+
+    public JButton getBtnInputKelas() {
+        return btnInputKelas;
+    }
+
+    public JButton getBtnJadwal() {
+        return btnJadwal;
+    }
+
+    public JButton getBtnJepang() {
+        return btnJepang;
+    }
+
+    public JButton getBtnKelas() {
+        return btnKelas;
+    }
+
+    public JButton getBtnKorea() {
+        return btnKorea;
+    }
+
+    public JButton getBtnPengajar() {
+        return btnPengajar;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,19 +84,18 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
-        btnInput = new javax.swing.JButton();
+        btnJepang = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
-        btnData = new javax.swing.JButton();
+        btnInggris = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
-        btnInput2 = new javax.swing.JButton();
+        btnKorea = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnInputKelas = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,7 +126,7 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -194,7 +226,7 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
         btnExit.setBackground(new java.awt.Color(0, 204, 204));
         btnExit.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logout.png"))); // NOI18N
-        btnExit.setText("LOG OUT");
+        btnExit.setText("KELUAR");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -253,19 +285,16 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 60)); // NOI18N
         jLabel1.setText("SPAKUBA");
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField1.setText("Search...");
-
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel9.setBackground(new java.awt.Color(0, 204, 204));
 
-        btnInput.setBackground(new java.awt.Color(0, 204, 204));
-        btnInput.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        btnInput.setText("BAHASA JEPANG");
-        btnInput.addActionListener(new java.awt.event.ActionListener() {
+        btnJepang.setBackground(new java.awt.Color(0, 204, 204));
+        btnJepang.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        btnJepang.setText("BAHASA JEPANG");
+        btnJepang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInputActionPerformed(evt);
+                btnJepangActionPerformed(evt);
             }
         });
 
@@ -276,7 +305,7 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnInput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnJepang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
@@ -284,14 +313,19 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnInput, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnJepang, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel10.setBackground(new java.awt.Color(0, 204, 204));
 
-        btnData.setBackground(new java.awt.Color(0, 204, 204));
-        btnData.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        btnData.setText("BAHASA INGGRIS");
+        btnInggris.setBackground(new java.awt.Color(0, 204, 204));
+        btnInggris.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        btnInggris.setText("BAHASA INGGRIS");
+        btnInggris.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInggrisActionPerformed(evt);
+            }
+        });
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/united-kingdom.png"))); // NOI18N
@@ -300,7 +334,7 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnInggris, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel10Layout.setVerticalGroup(
@@ -309,14 +343,19 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addGap(36, 36, 36)
-                .addComponent(btnData, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnInggris, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel12.setBackground(new java.awt.Color(0, 204, 204));
 
-        btnInput2.setBackground(new java.awt.Color(0, 204, 204));
-        btnInput2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        btnInput2.setText("BAHASA KOREA");
+        btnKorea.setBackground(new java.awt.Color(0, 204, 204));
+        btnKorea.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        btnKorea.setText("BAHASA KOREA");
+        btnKorea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKoreaActionPerformed(evt);
+            }
+        });
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/south-korea.png"))); // NOI18N
@@ -325,7 +364,7 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnInput2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnKorea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(3, 3, 3))
@@ -335,14 +374,19 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                 .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
                 .addGap(26, 26, 26)
-                .addComponent(btnInput2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnKorea, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel13.setBackground(new java.awt.Color(0, 204, 204));
 
-        jButton1.setBackground(new java.awt.Color(0, 204, 204));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jButton1.setText("BUAT KELAS");
+        btnInputKelas.setBackground(new java.awt.Color(0, 204, 204));
+        btnInputKelas.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        btnInputKelas.setText("BUAT KELAS");
+        btnInputKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInputKelasActionPerformed(evt);
+            }
+        });
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/classroom.png"))); // NOI18N
@@ -351,7 +395,7 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnInputKelas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel13Layout.setVerticalGroup(
@@ -359,7 +403,7 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnInputKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -388,7 +432,7 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -402,27 +446,16 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))
                         .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGap(36, 36, 36)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -465,9 +498,18 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInputActionPerformed
+    private void btnJepangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJepangActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnInputActionPerformed
+        BahasaJepang_View kelashome = null;
+        try {
+            kelashome = new BahasaJepang_View();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaKelasHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        kelashome.setVisible(true);
+        kelashome.toFront();
+        dispose();
+    }//GEN-LAST:event_btnJepangActionPerformed
 
     private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
         // TODO add your handling code here:
@@ -497,6 +539,45 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
         sishome.toFront();
         dispose();
     }//GEN-LAST:event_btnSiswaActionPerformed
+
+    private void btnInputKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInputKelasActionPerformed
+        // TODO add your handling code here:
+        CobaKelasForm_View kelashome = null;
+        try {
+            kelashome = new CobaKelasForm_View();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaKelasHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        kelashome.setVisible(true);
+        kelashome.toFront();
+        dispose();
+    }//GEN-LAST:event_btnInputKelasActionPerformed
+
+    private void btnInggrisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInggrisActionPerformed
+        // TODO add your handling code here:
+        BahasaInggris_View kelashome = null;
+        try {
+            kelashome = new BahasaInggris_View();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaKelasHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        kelashome.setVisible(true);
+        kelashome.toFront();
+        dispose();
+    }//GEN-LAST:event_btnInggrisActionPerformed
+
+    private void btnKoreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKoreaActionPerformed
+        // TODO add your handling code here:
+        BahasaKorea_View kelashome = null;
+        try {
+            kelashome = new BahasaKorea_View();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaKelasHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        kelashome.setVisible(true);
+        kelashome.toFront();
+        dispose();
+    }//GEN-LAST:event_btnKoreaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -541,15 +622,15 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnData;
     private javax.swing.JButton btnExit;
-    private javax.swing.JButton btnInput;
-    private javax.swing.JButton btnInput2;
+    private javax.swing.JButton btnInggris;
+    private javax.swing.JButton btnInputKelas;
     private javax.swing.JButton btnJadwal;
+    private javax.swing.JButton btnJepang;
     private javax.swing.JButton btnKelas;
+    private javax.swing.JButton btnKorea;
     private javax.swing.JButton btnPengajar;
     private javax.swing.JButton btnSiswa;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -571,6 +652,5 @@ public class CobaKelasHome_View extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
