@@ -5,6 +5,9 @@
  */
 package login;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author USER
@@ -18,6 +21,18 @@ public class Login_View extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JButton getBtnLogin() {
+        return btnLogin;
+    }
+
+    public JTextField getTxtPassword() {
+        return txtPassword;
+    }
+
+    public JTextField getTxtUsername() {
+        return txtUsername;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -189,6 +204,7 @@ public class Login_View extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
