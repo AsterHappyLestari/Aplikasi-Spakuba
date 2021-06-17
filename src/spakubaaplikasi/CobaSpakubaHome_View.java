@@ -5,6 +5,9 @@
  */
 package spakubaaplikasi;
 
+import Kelas.CobaKelasHome_View;
+import Pengajar.CobaPengajarHome_View;
+import Siswa.CobaSiswaHome_View;
 import javax.swing.JFrame;
 
 /**
@@ -61,6 +64,11 @@ public class CobaSpakubaHome_View extends javax.swing.JFrame {
         btnPengajar.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnPengajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/pengajar1.png"))); // NOI18N
         btnPengajar.setText("PENGAJAR");
+        btnPengajar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPengajarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -85,6 +93,11 @@ public class CobaSpakubaHome_View extends javax.swing.JFrame {
         btnKelas.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnKelas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/kelas.png"))); // NOI18N
         btnKelas.setText("KELAS");
+        btnKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKelasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -109,6 +122,11 @@ public class CobaSpakubaHome_View extends javax.swing.JFrame {
         btnJadwal.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnJadwal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/jadwal.png"))); // NOI18N
         btnJadwal.setText("JADWAL");
+        btnJadwal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJadwalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -164,6 +182,11 @@ public class CobaSpakubaHome_View extends javax.swing.JFrame {
         btnExit.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logout.png"))); // NOI18N
         btnExit.setText("LOG OUT");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -308,8 +331,36 @@ public class CobaSpakubaHome_View extends javax.swing.JFrame {
 
     private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
         // TODO add your handling code here:
-        
+        CobaSiswaHome_View sishome = new CobaSiswaHome_View();
+        sishome.setVisible(true);
+        sishome.toFront();
+        dispose();
     }//GEN-LAST:event_btnSiswaActionPerformed
+
+    private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
+        // TODO add your handling code here:
+        CobaPengajarHome_View guruhome = new CobaPengajarHome_View();
+        guruhome.setVisible(true);
+        guruhome.toFront();
+        dispose();
+    }//GEN-LAST:event_btnPengajarActionPerformed
+
+    private void btnJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJadwalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnJadwalActionPerformed
+
+    private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
+        // TODO add your handling code here:
+        CobaKelasHome_View kelashome = new CobaKelasHome_View();
+        kelashome.setVisible(true);
+        kelashome.toFront();
+        dispose();
+    }//GEN-LAST:event_btnKelasActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments

@@ -5,6 +5,7 @@
  */
 package Kelas;
 
+import Pengajar.*;
 import Siswa.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -65,11 +66,11 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         return txtId_kelas;
     }
 
-    public JTextField getTxtNamaSiswa() {
-        return txtNamaSiswa;
+    public JTextField getTxtNamaKelas() {
+        return txtNamaKelas;
     }
-    
 
+       
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -105,19 +106,19 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtId_kelas = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        txtNamaKelas = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        btnSimpan = new javax.swing.JButton();
-        cbHari = new javax.swing.JComboBox<>();
-        cbProgramkls = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
-        txtNamaSiswa = new javax.swing.JTextField();
+        btnSimpan = new javax.swing.JButton();
+        cbProgramkls = new javax.swing.JComboBox<>();
+        cbHari = new javax.swing.JComboBox<>();
         jPanel12 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(0, 0));
 
         jScrollPane1.setBackground(new java.awt.Color(0, 204, 204));
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(1203, 949));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1156, 949));
 
         jPanel13.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -293,7 +294,7 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Form Data Kelas");
@@ -330,31 +331,31 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         jPanel11.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jLabel5.setText("Id Siswa");
+        jLabel5.setText("Id Kelas");
 
         txtId_kelas.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jLabel6.setText("Program Kelas");
+        jLabel6.setText("Nama Kelas");
+
+        txtNamaKelas.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jLabel7.setText("Hari");
+        jLabel7.setText("Program Kelas");
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel8.setText("Hari");
 
         btnSimpan.setBackground(new java.awt.Color(0, 204, 204));
         btnSimpan.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         btnSimpan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/save.png"))); // NOI18N
         btnSimpan.setText("SIMPAN");
 
-        cbHari.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        cbHari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Hari", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu" }));
-
         cbProgramkls.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         cbProgramkls.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Bahasa", "Bahasa Inggris", "Bahasa Jepang", "Bahasa Korea" }));
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jLabel8.setText("Nama Siswa");
-
-        txtNamaSiswa.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        cbHari.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        cbHari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Hari", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu" }));
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -369,15 +370,15 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
                         .addGap(111, 111, 111)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel8))
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))
                         .addGap(32, 32, 32)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtId_kelas)
-                            .addComponent(cbHari, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cbProgramkls, 0, 250, Short.MAX_VALUE)
-                            .addComponent(txtNamaSiswa))))
+                            .addComponent(txtNamaKelas)
+                            .addComponent(cbProgramkls, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbHari, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(48, 48, 48))
         );
         jPanel11Layout.setVerticalGroup(
@@ -387,19 +388,18 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txtId_kelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
+                .addGap(46, 46, 46)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(txtNamaKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(cbProgramkls, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(txtNamaSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cbHari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cbProgramkls, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel7)))
+                    .addComponent(cbHari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnSimpan)
                 .addContainerGap())
@@ -506,7 +506,7 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1187, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1140, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -541,6 +541,22 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CobaKelasForm_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -603,6 +619,6 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField txtId_kelas;
-    private javax.swing.JTextField txtNamaSiswa;
+    private javax.swing.JTextField txtNamaKelas;
     // End of variables declaration//GEN-END:variables
 }

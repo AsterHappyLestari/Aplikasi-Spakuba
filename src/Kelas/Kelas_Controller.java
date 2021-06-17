@@ -36,7 +36,7 @@ public class Kelas_Controller {
     public void kelas(){
         model = new Kelas_Model();
         model.setId_kelas(view.getTxtId_kelas().getText());
-        model.setNamaSiswa(view.getTxtNamaSiswa().getText());
+        model.setNamaSiswa(view.getTxtNamaKelas().getText());
         model.setProgramkls(view.getCbProgramkls().getSelectedItem().toString());
         model.setHari(view.getCbHari().getSelectedItem().toString());
 
