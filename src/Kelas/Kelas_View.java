@@ -17,6 +17,7 @@ public class Kelas_View extends javax.swing.JFrame {
     /**
      * Creates new form Kelas_View
      */
+    
     public Kelas_View() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);

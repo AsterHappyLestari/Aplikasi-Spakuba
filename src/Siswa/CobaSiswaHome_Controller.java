@@ -10,9 +10,15 @@ import Model.Siswa_Model;
 import java.sql.Connection;
 import java.util.HashMap;
 import koneksi.Koneksi;
+<<<<<<< HEAD
 //import net.sf.jasperreports.engine.JasperFillManager;
 //import net.sf.jasperreports.engine.JasperPrint;
 //import net.sf.jasperreports.view.JasperViewer;
+=======
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
+>>>>>>> 00f3fe5afadb5933478ba63f7dc52c8ddec1177e
 
 /**
  *
@@ -32,6 +38,7 @@ public class CobaSiswaHome_Controller {
         k = new Koneksi();
         con = k.getConnection();
     }
+<<<<<<< HEAD
 //      public void previewrapor_siswa(){
 //        HashMap parameter = new HashMap();
 //        JasperPrint jasperPrint = null;
@@ -42,6 +49,18 @@ public class CobaSiswaHome_Controller {
 //            System.out.print(ex.toString());
 //        }
 //    }
+=======
+      public void previewrapor_siswa(){
+        HashMap parameter = new HashMap();
+        JasperPrint jasperPrint = null;
+        try {
+            jasperPrint = JasperFillManager.fillReport("report/rapor_siswa.jasper", parameter, con);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (Exception ex) {
+            System.out.print(ex.toString());
+        }
+    }
+>>>>>>> 00f3fe5afadb5933478ba63f7dc52c8ddec1177e
     
     
 //    public void siswa(){
@@ -62,6 +81,7 @@ public class CobaSiswaHome_Controller {
 //        
        
     }
+<<<<<<< HEAD
 //    public void previewrapor_siswa(){
 //        HashMap parameter = new HashMap();
 //        JasperPrint jasperPrint = null;
@@ -72,6 +92,18 @@ public class CobaSiswaHome_Controller {
 //            System.out.print(ex.toString());
 //        }
 //    }
+=======
+    public void previewrapor_siswa(){
+        HashMap parameter = new HashMap();
+        JasperPrint jasperPrint = null;
+        try {
+            jasperPrint = JasperFillManager.fillReport("report/rapor_siswa.jasper", parameter, con);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (Exception ex) {
+            System.out.print(ex.toString());
+        }
+    }
+>>>>>>> 00f3fe5afadb5933478ba63f7dc52c8ddec1177e
 
 //        
 //    }

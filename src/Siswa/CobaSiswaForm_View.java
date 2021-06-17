@@ -7,7 +7,11 @@ package Siswa;
 
 import Kelas.CobaKelasHome_View;
 import Pengajar.CobaPengajarHome_View;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JTextField;
 
 /**
  *
@@ -18,10 +22,61 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
     /**
      * Creates new form CobaHome_View
      */
-    public CobaSiswaForm_View() {
+    Siswa_Controller controller;
+    public CobaSiswaForm_View() throws ClassNotFoundException {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+         controller = new Siswa_Controller(this);
     }
+
+    public Siswa_Controller getController() {
+        return controller;
+    }
+
+    public JButton getBtnExit() {
+        return btnExit;
+    }
+
+    public JButton getBtnJadwal() {
+        return btnJadwal;
+    }
+
+    public JButton getBtnKelas() {
+        return btnKelas;
+    }
+
+    public JButton getBtnPengajar() {
+        return btnPengajar;
+    }
+
+    public JButton getBtnSiswa() {
+        return btnSiswa;
+    }
+
+    public JTextField getTxtAlamat() {
+        return txtAlamat;
+    }
+
+    public JTextField getTxtId_kelas() {
+        return txtId_kelas;
+    }
+
+    public JTextField getTxtId_siswa() {
+        return txtId_siswa;
+    }
+
+    public JTextField getTxtNama_siswa() {
+        return txtNama_siswa;
+    }
+
+    public JTextField getTxtNotelp() {
+        return txtNotelp;
+    }
+
+    public JTextField getTxtTtl() {
+        return txtTtl;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,17 +111,17 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtId_siswa = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtNama_siswa = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        txtTtl = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtNotelp = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        txtAlamat = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        txtId_kelas = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
 
@@ -98,7 +153,7 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -302,37 +357,47 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel5.setText("Id Siswa");
 
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtId_siswa.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtId_siswa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtId_siswaActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel6.setText("Nama Siswa");
 
-        jTextField3.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtNama_siswa.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel7.setText("Tempat/Tgl. Lahir");
 
-        jTextField4.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtTtl.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel8.setText("No Telepon");
 
-        jTextField5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtNotelp.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel9.setText("Alamat");
 
-        jTextField6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtAlamat.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel10.setText("Id Kelas");
 
-        jTextField7.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtId_kelas.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jButton1.setBackground(new java.awt.Color(0, 204, 204));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/save.png"))); // NOI18N
         jButton1.setText("SIMPAN");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -354,12 +419,12 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
                             .addComponent(jLabel10))
                         .addGap(32, 32, 32)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField3)
-                            .addComponent(jTextField4)
-                            .addComponent(jTextField5)
-                            .addComponent(jTextField6)
-                            .addComponent(jTextField7))))
+                            .addComponent(txtId_siswa)
+                            .addComponent(txtNama_siswa)
+                            .addComponent(txtTtl)
+                            .addComponent(txtNotelp)
+                            .addComponent(txtAlamat)
+                            .addComponent(txtId_kelas))))
                 .addGap(48, 48, 48))
         );
         jPanel11Layout.setVerticalGroup(
@@ -368,27 +433,27 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
                 .addGap(106, 106, 106)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtId_siswa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNama_siswa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTtl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNotelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtId_kelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
@@ -529,6 +594,14 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnKelasActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        controller.siswa();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtId_siswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtId_siswaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtId_siswaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -566,7 +639,11 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CobaSiswaForm_View().setVisible(true);
+                try {
+                    new CobaSiswaForm_View().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(CobaSiswaForm_View.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -603,11 +680,11 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField txtAlamat;
+    private javax.swing.JTextField txtId_kelas;
+    private javax.swing.JTextField txtId_siswa;
+    private javax.swing.JTextField txtNama_siswa;
+    private javax.swing.JTextField txtNotelp;
+    private javax.swing.JTextField txtTtl;
     // End of variables declaration//GEN-END:variables
 }

@@ -8,20 +8,24 @@ package Siswa;
 import DAO.Siswa_DAO;
 import Model.Siswa_Model;
 import java.sql.Connection;
+import java.util.HashMap;
 import koneksi.Koneksi;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
  * @author USER
  */
 public class Siswa_Controller {
-    SiswaForm_View view;
+    CobaSiswaForm_View view;
     Siswa_Model model;
     Siswa_DAO dao;
     Connection con;
     Koneksi k;
 
-    public Siswa_Controller(SiswaForm_View view) throws ClassNotFoundException{
+    public Siswa_Controller(CobaSiswaForm_View view) throws ClassNotFoundException{
 
         this.view = view;
         dao = new Siswa_DAO();
@@ -34,10 +38,10 @@ public class Siswa_Controller {
     public void siswa(){
         model = new Siswa_Model();
         model.setId_siswa(view.getTxtId_siswa().getText());
-        model.setNamasiswa(view.getTxtNamasiswa().getText());
+        model.setNamasiswa(view.getTxtNama_siswa().getText());
         model.setTtlsiswa(view.getTxtTtl().getText());
-        model.setNotelpsiswa(view.getTxtNotelpsiswa().getText());
-        model.setAlamatsiswa(view.getTxtAlamatsiswa().getText());
+        model.setNotelpsiswa(view.getTxtNotelp().getText());
+        model.setAlamatsiswa(view.getTxtAlamat().getText());
         model.setId_kelas(view.getTxtId_kelas().getText());
         
         try{
@@ -46,10 +50,20 @@ public class Siswa_Controller {
         }catch(Exception ex){
             javax.swing.JOptionPane.showMessageDialog(null, "Error"+ex.getMessage());
         }
+        
+       
     }
-    
-//    public void onClickTable(){
-//        int index = view.geTabelSiswa().getSelectedRow();
+    public void previewrapor_siswa(){
+        HashMap parameter = new HashMap();
+        JasperPrint jasperPrint = null;
+        try {
+            jasperPrint = JasperFillManager.fillReport("report/rapor_siswa.jasper", parameter, con);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (Exception ex) {
+            System.out.print(ex.toString());
+        }
+    }
+
 //        
 //    }
 }

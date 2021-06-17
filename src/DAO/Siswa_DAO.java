@@ -35,6 +35,7 @@ public class Siswa_DAO {
        ps.setString(4, siswa.getNotelpsiswa());
        ps.setString(5, siswa.getAlamatsiswa());
        ps.setString(6, siswa.getId_kelas());
+       ps.executeUpdate();
        
    }
  public static void update(Connection con, Siswa_Model siswa) throws SQLException{

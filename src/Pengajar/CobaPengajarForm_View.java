@@ -5,8 +5,13 @@
  */
 package Pengajar;
 
+import Kelas.Kelas_Controller;
 import Siswa.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JTextField;
 
 /**
  *
@@ -17,11 +22,57 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
     /**
      * Creates new form CobaHome_View
      */
-    public CobaPengajarForm_View() {
+      Pengajar_Controller c;
+    public CobaPengajarForm_View() throws ClassNotFoundException {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        c = new Pengajar_Controller(this);
     }
 
+    public JButton getBtnExit() {
+        return btnExit;
+    }
+
+    public JButton getBtnJadwal() {
+        return btnJadwal;
+    }
+
+    public JButton getBtnKelas() {
+        return btnKelas;
+    }
+
+    public JButton getBtnPengajar() {
+        return btnPengajar;
+    }
+
+    public JButton getBtnSimpan() {
+        return btnSimpan;
+    }
+
+    public JButton getBtnSiswa() {
+        return btnSiswa;
+    }
+
+    public JTextField getTxtAlamat() {
+        return txtAlamat;
+    }
+
+    public JTextField getTxtEmail() {
+        return txtEmail;
+    }
+
+    public JTextField getTxtId_pengajar() {
+        return txtId_pengajar;
+    }
+
+    public JTextField getTxtNamapengajar() {
+        return txtNamapengajar;
+    }
+
+    public JTextField getTxtNotelp() {
+        return txtNotelp;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -55,16 +106,16 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtId_pengajar = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtNamapengajar = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtNotelp = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtAlamat = new javax.swing.JTextField();
+        btnSimpan = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -286,32 +337,37 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel5.setText("Id Pengajar");
 
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtId_pengajar.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel6.setText("Nama Lengkap");
 
-        jTextField3.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtNamapengajar.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel7.setText("Email");
 
-        jTextField4.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtEmail.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel8.setText("No Telepon");
 
-        jTextField5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtNotelp.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel9.setText("Alamat");
 
-        jTextField6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        txtAlamat.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(0, 204, 204));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/save.png"))); // NOI18N
-        jButton1.setText("SIMPAN");
+        btnSimpan.setBackground(new java.awt.Color(0, 204, 204));
+        btnSimpan.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnSimpan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/save.png"))); // NOI18N
+        btnSimpan.setText("SIMPAN");
+        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimpanActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -321,7 +377,7 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(btnSimpan))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(111, 111, 111)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -332,11 +388,11 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
                             .addComponent(jLabel6))
                         .addGap(32, 32, 32)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
-                            .addComponent(jTextField3)
-                            .addComponent(jTextField4)
-                            .addComponent(jTextField5)
-                            .addComponent(jTextField6))))
+                            .addComponent(txtId_pengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                            .addComponent(txtNamapengajar)
+                            .addComponent(txtEmail)
+                            .addComponent(txtNotelp)
+                            .addComponent(txtAlamat))))
                 .addGap(48, 48, 48))
         );
         jPanel11Layout.setVerticalGroup(
@@ -345,25 +401,25 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
                 .addGap(106, 106, 106)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtId_pengajar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNamapengajar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNotelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnSimpan)
                 .addContainerGap())
         );
 
@@ -478,6 +534,10 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
+        c.pengajar();        
+    }//GEN-LAST:event_btnSimpanActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -523,7 +583,11 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CobaPengajarForm_View().setVisible(true);
+                try {
+                    new CobaPengajarForm_View().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(CobaPengajarForm_View.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -533,8 +597,8 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
     private javax.swing.JButton btnJadwal;
     private javax.swing.JButton btnKelas;
     private javax.swing.JButton btnPengajar;
+    private javax.swing.JButton btnSimpan;
     private javax.swing.JButton btnSiswa;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -559,10 +623,10 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField txtAlamat;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtId_pengajar;
+    private javax.swing.JTextField txtNamapengajar;
+    private javax.swing.JTextField txtNotelp;
     // End of variables declaration//GEN-END:variables
 }
