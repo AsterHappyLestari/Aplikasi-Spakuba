@@ -110,12 +110,11 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         btnSimpan = new javax.swing.JButton();
-        cbProgramkls = new javax.swing.JComboBox<>();
-        cbHari = new javax.swing.JComboBox<>();
+        cbProgramkls = new javax.swing.JComboBox<String>();
+        cbHari = new javax.swing.JComboBox<String>();
         jPanel12 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(0, 0));
 
         jScrollPane1.setBackground(new java.awt.Color(0, 204, 204));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(1156, 949));
@@ -138,7 +137,7 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -357,10 +356,10 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         });
 
         cbProgramkls.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        cbProgramkls.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Bahasa", "Bahasa Inggris", "Bahasa Jepang", "Bahasa Korea" }));
+        cbProgramkls.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pilih Bahasa", "Bahasa Inggris", "Bahasa Jepang", "Bahasa Korea" }));
 
         cbHari.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        cbHari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Hari", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu" }));
+        cbHari.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pilih Hari", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu" }));
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -522,6 +521,7 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
+
         c.kelas();
     }//GEN-LAST:event_btnSimpanActionPerformed
 

@@ -27,30 +27,30 @@ public class Kelas_DAO {
        String sql = "insert into kelas values(?,?,?,?)";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, kelas.getId_kelas());
-       ps.setString(2, kelas.getNamaSiswa());
+       ps.setString(2, kelas.getNamaKelas());
        ps.setString(3, kelas.getProgramkls());
        ps.setString(4, kelas.getHari());
         ps.executeUpdate();
    }
    public static void update(Connection con, Kelas_Model kelas) throws SQLException{
-       String sql = "update kelas set NamaSiswa=?, programkls=?, hari=?"
+       String sql = "update kelas set NamaKelas=?, programkls=?, hari=?"
                +"where id_kelas=?";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, kelas.getId_kelas());
-       ps.setString(2, kelas.getNamaSiswa());
+       ps.setString(2, kelas.getNamaKelas());
        ps.setString(3, kelas.getProgramkls());
        ps.setString(4, kelas.getHari());
        ps.executeUpdate();
    }
    public static void delete(Connection con, Kelas_Model kelas) throws SQLException{
-       String sql = "delete from admin where id_kelas=?";
+       String sql = "delete from kelas where id_kelas=?";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, kelas.getId_kelas());
        ps.executeUpdate();
    }
    
    public static Kelas_Model getKelas(Connection con, String id_kelas) throws SQLException{
-       String sql = "select * from admin where id_kelas=?";
+       String sql = "select * from kelas where id_kelas=?";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, id_kelas);
        Kelas_Model kelas = null;
@@ -58,7 +58,7 @@ public class Kelas_DAO {
        while(rs.next()){
            kelas = new Kelas_Model();
            kelas.setId_kelas(rs.getString(1));
-           kelas.setNamaSiswa(rs.getString(2));
+           kelas.setNamaKelas(rs.getString(2));
            kelas.setProgramkls(rs.getString(3));
            kelas.setHari(rs.getString(4));
        }

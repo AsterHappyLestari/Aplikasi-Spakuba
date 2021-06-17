@@ -38,15 +38,16 @@ public class JadwalSenin_Controller {
         try{
         DefaultTableModel tableModel = (DefaultTableModel)view.getTabel().getModel();
         tableModel.setRowCount(0);
-        ResultSet rs = k.getQuery(con, "SELECT id_pengajar, namapengajar, email, notelppengajar, alamatpengajar from pengajar");
+        ResultSet rs = k.getQuery(con, "SELECT `kelas`.`id_kelas`, `ajar`.`waktu`, `pengajar`.`namapengajar`\n" +
+"FROM `kelas` \n" +
+"	LEFT JOIN `ajar` ON `ajar`.`id_kelas` = `kelas`.`id_kelas` \n" +
+"	LEFT JOIN `pengajar` ON `ajar`.`id_pengajar` = `pengajar`.`id_pengajar` where hari= 'Senin';");
         
         while(rs.next()){
             Object data[] = {
                 rs.getString(1),
                 rs.getString(2),
-                rs.getString(3),
-                rs.getString(4),
-                rs.getString(5)
+                rs.getString(3)
             };
             tableModel.addRow(data);
         }
