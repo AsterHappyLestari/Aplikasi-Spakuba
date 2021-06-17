@@ -10,9 +10,15 @@ import Model.Siswa_Model;
 import java.sql.Connection;
 import java.util.HashMap;
 import koneksi.Koneksi;
+
+//import net.sf.jasperreports.engine.JasperFillManager;
+//import net.sf.jasperreports.engine.JasperPrint;
+//import net.sf.jasperreports.view.JasperViewer;
+
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.view.JasperViewer;
+
 
 /**
  *
@@ -32,6 +38,18 @@ public class CobaSiswaHome_Controller {
         k = new Koneksi();
         con = k.getConnection();
     }
+
+//      public void previewrapor_siswa(){
+//        HashMap parameter = new HashMap();
+//        JasperPrint jasperPrint = null;
+//        try {
+//            jasperPrint = JasperFillManager.fillReport("report/rapor_siswa.jasper", parameter, con);
+//            JasperViewer.viewReport(jasperPrint, false);
+//        } catch (Exception ex) {
+//            System.out.print(ex.toString());
+//        }
+//    }
+
       public void previewrapor_siswa(){
         HashMap parameter = new HashMap();
         JasperPrint jasperPrint = null;
@@ -42,7 +60,8 @@ public class CobaSiswaHome_Controller {
             System.out.print(ex.toString());
         }
     }
-    
+
+}
     
 //    public void siswa(){
 //        model = new Siswa_Model();
@@ -61,17 +80,4 @@ public class CobaSiswaHome_Controller {
 //        }
 //        
        
-    }
-//    public void previewrapor_siswa(){
-//        HashMap parameter = new HashMap();
-//        JasperPrint jasperPrint = null;
-//        try {
-//            jasperPrint = JasperFillManager.fillReport("report/rapor_siswa.jasper", parameter, con);
-//            JasperViewer.viewReport(jasperPrint, false);
-//        } catch (Exception ex) {
-//            System.out.print(ex.toString());
-//        }
-//    }
 
-//        
-//    }

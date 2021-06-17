@@ -5,9 +5,13 @@
  */
 package login;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+import spakubaaplikasi.CobaSpakubaHome_View;
 
 /**
  *
@@ -18,9 +22,12 @@ public class Login_View extends javax.swing.JFrame {
     /**
      * Creates new form Login_View
      */
+    Login_Controller c;
     public Login_View() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        c = new Login_Controller(this);
+
     }
 
     public JButton getBtnLogin() {
@@ -205,8 +212,17 @@ public class Login_View extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        // TODO add your handling code here:
-        
+        try {
+            // TODO add your handling code here:
+            if( c.login() != null){
+                CobaSpakubaHome_View home = new CobaSpakubaHome_View();
+                home.setVisible(true);
+                home.toFront();
+                dispose();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Login_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
