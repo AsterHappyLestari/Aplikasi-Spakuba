@@ -16,13 +16,13 @@ import koneksi.Koneksi;
  * @author USER
  */
 public class Pengajar_Controller {
-    PengajarForm_View view;
+    CobaPengajarForm_View view;
     Pengajar_Model model;
     Pengajar_DAO dao;
     Connection con;
     Koneksi k;
 
-    public Pengajar_Controller(PengajarForm_View view) throws ClassNotFoundException{
+    public Pengajar_Controller(CobaPengajarForm_View view) throws ClassNotFoundException{
 
         this.view = view;
         dao = new Pengajar_DAO();
@@ -37,7 +37,7 @@ public class Pengajar_Controller {
         model.setId_pengajar(view.getTxtId_pengajar().getText());
         model.setNamapengajar(view.getTxtNamapengajar().getText());
         model.setEmail(view.getTxtEmail().getText());
-        model.setNotelppengajar(view.getTxtNotelppengajar().getText());
+        model.setNotelppengajar(view.getTxtNotelp().getText());
         model.setAlamatpengajar(view.getTxtAlamat().getText());
         
         try{

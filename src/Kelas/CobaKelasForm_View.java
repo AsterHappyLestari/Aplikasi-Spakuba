@@ -350,6 +350,11 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
         btnSimpan.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         btnSimpan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/save.png"))); // NOI18N
         btnSimpan.setText("SIMPAN");
+        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimpanActionPerformed(evt);
+            }
+        });
 
         cbProgramkls.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         cbProgramkls.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Bahasa", "Bahasa Inggris", "Bahasa Jepang", "Bahasa Korea" }));
@@ -515,6 +520,10 @@ public class CobaKelasForm_View extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
+        c.kelas();
+    }//GEN-LAST:event_btnSimpanActionPerformed
 
     /**
      * @param args the command line arguments

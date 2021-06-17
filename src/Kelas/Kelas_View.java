@@ -17,6 +17,7 @@ public class Kelas_View extends javax.swing.JFrame {
     /**
      * Creates new form Kelas_View
      */
+    
     public Kelas_View() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -175,16 +176,16 @@ public class Kelas_View extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPengajarActionPerformed
 
     private void btnFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFormActionPerformed
-        try {
-            // TODO add your handling code here:
-            KelasForm_View form = new KelasForm_View();
-            form.setVisible(true);
-            form.toFront();
-            dispose();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Kelas_View.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+//        try {
+//            // TODO add your handling code here:
+//            KelasForm_View form = new KelasForm_View();
+//            form.setVisible(true);
+//            form.toFront();
+//            dispose();
+//        } catch (ClassNotFoundException ex) {
+//            Logger.getLogger(Kelas_View.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
     }//GEN-LAST:event_btnFormActionPerformed
 
     /**

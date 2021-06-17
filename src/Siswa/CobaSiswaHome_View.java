@@ -7,6 +7,9 @@ package Siswa;
 
 import Kelas.CobaKelasHome_View;
 import Pengajar.CobaPengajarHome_View;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
@@ -18,11 +21,18 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
     /**
      * Creates new form CobaHome_View
      */
-    public CobaSiswaHome_View() {
+    CobaSiswaHome_Controller controller;
+    public CobaSiswaHome_View() throws ClassNotFoundException {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        controller = new CobaSiswaHome_Controller(this);
     }
 
+    public JButton getBtncetaklaporan() {
+        return btncetaklaporan;
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -57,6 +67,7 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         btnData = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        btncetaklaporan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,7 +97,7 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -298,6 +309,13 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
                 .addComponent(btnData, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        btncetaklaporan.setText("Cetak Laporan");
+        btncetaklaporan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncetaklaporanActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -308,6 +326,10 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
                 .addGap(98, 98, 98)
                 .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(124, 124, 124))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btncetaklaporan)
+                .addGap(368, 368, 368))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -316,7 +338,9 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(245, 245, 245))
+                .addGap(87, 87, 87)
+                .addComponent(btncetaklaporan)
+                .addGap(129, 129, 129))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -387,7 +411,10 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -411,11 +438,21 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
 
     private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
         // TODO add your handling code here:
-        CobaSiswaHome_View sishome = new CobaSiswaHome_View();
+        CobaSiswaHome_View sishome = null;
+        try {
+            sishome = new CobaSiswaHome_View();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaSiswaHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
         sishome.setVisible(true);
         sishome.toFront();
         dispose();
     }//GEN-LAST:event_btnSiswaActionPerformed
+
+    private void btncetaklaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncetaklaporanActionPerformed
+        // TODO add your handling code here:
+        controller.previewrapor_siswa();
+    }//GEN-LAST:event_btncetaklaporanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -450,7 +487,11 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CobaSiswaHome_View().setVisible(true);
+                try {
+                    new CobaSiswaHome_View().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(CobaSiswaHome_View.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -463,6 +504,7 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
     private javax.swing.JButton btnKelas;
     private javax.swing.JButton btnPengajar;
     private javax.swing.JButton btnSiswa;
+    private javax.swing.JButton btncetaklaporan;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
