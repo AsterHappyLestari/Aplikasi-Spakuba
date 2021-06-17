@@ -5,6 +5,11 @@
  */
 package spakubaaplikasi;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
+import registrasi.Registrasi_View;
+
 
 
 /**
@@ -18,6 +23,7 @@ public class CobaAwal_View extends javax.swing.JFrame {
      */
     public CobaAwal_View() {
         initComponents();
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -57,10 +63,20 @@ public class CobaAwal_View extends javax.swing.JFrame {
         btnLogin.setBackground(new java.awt.Color(0, 204, 204));
         btnLogin.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         btnLogin.setText("Sign In");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
 
         btnRegister.setBackground(new java.awt.Color(0, 204, 204));
         btnRegister.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         btnRegister.setText("Sign Up");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/user.png"))); // NOI18N
@@ -217,6 +233,24 @@ public class CobaAwal_View extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        try {
+            // TODO add your handling code here:
+            Registrasi_View regis = new Registrasi_View();
+            regis.setVisible(true);
+            regis.toFront();
+            dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaAwal_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_btnRegisterActionPerformed
 
     /**
      * @param args the command line arguments
