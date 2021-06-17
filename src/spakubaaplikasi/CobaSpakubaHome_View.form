@@ -125,6 +125,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="PENGAJAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPengajarActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -169,6 +172,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="KELAS"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKelasActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -213,6 +219,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="JADWAL"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnJadwalActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -311,6 +320,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="LOG OUT"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExitActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
