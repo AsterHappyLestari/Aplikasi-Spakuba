@@ -60,6 +60,7 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(0, 0));
 
+        jScrollPane1.setBackground(new java.awt.Color(0, 204, 204));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(1168, 962));
 
         jPanel11.setBackground(new java.awt.Color(0, 0, 0));
