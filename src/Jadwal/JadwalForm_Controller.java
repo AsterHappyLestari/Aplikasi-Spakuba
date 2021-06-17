@@ -37,7 +37,7 @@ public class JadwalForm_Controller {
         model.setId_kelas(view.getTxtId_Kelas().getText());
         model.setId_pengajar(view.getTxtNamaPengajar().getText());
         model.setWaktu(view.getTxtWaktu().getText());
-        model.setTanggal(view.getCbHari().getSelectedItem().toString());
+        model.setHari(view.getCbHari().getSelectedItem().toString());
         
         try{
             dao.insert(con, model);

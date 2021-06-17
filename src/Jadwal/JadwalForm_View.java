@@ -61,10 +61,6 @@ public class JadwalForm_View extends javax.swing.JFrame {
         return btnSimpan;
     }
 
-    public JTextField getjTextField1() {
-        return jTextField1;
-    }
-
     public JTextField getTxtId_Kelas() {
         return txtId_Kelas;
     }

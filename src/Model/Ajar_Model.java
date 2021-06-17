@@ -12,7 +12,7 @@ package Model;
 public class Ajar_Model {
     private String id_kelas;
     private String id_pengajar;
-    private String tanggal;
+    private String hari;
     private String waktu;
 
     public String getId_kelas() {
@@ -31,12 +31,12 @@ public class Ajar_Model {
         this.id_pengajar = id_pengajar;
     }
 
-    public String getTanggal() {
-        return tanggal;
+    public String getHari() {
+        return hari;
     }
 
-    public void setTanggal(String tanggal) {
-        this.tanggal = tanggal;
+    public void setHari(String hari) {
+        this.hari = hari;
     }
 
     public String getWaktu() {
@@ -45,6 +45,10 @@ public class Ajar_Model {
 
     public void setWaktu(String waktu) {
         this.waktu = waktu;
+    }
+
+    public String getNama_pengajar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
