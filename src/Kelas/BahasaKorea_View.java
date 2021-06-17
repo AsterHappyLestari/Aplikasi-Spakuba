@@ -52,7 +52,7 @@ public class BahasaKorea_View extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tbBahasaKorea = new javax.swing.JTable();
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
 
@@ -238,9 +238,9 @@ public class BahasaKorea_View extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Data Kelas Bahasa Korea");
 
-        jTable1.setBackground(new java.awt.Color(0, 204, 204));
-        jTable1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbBahasaKorea.setBackground(new java.awt.Color(0, 204, 204));
+        tbBahasaKorea.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        tbBahasaKorea.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -267,9 +267,9 @@ public class BahasaKorea_View extends javax.swing.JFrame {
                 "Id Kelas", "Nama Kelas", "Program Bahasa", "Hari"
             }
         ));
-        jTable1.setRowHeight(30);
-        jTable1.setRowMargin(3);
-        jScrollPane2.setViewportView(jTable1);
+        tbBahasaKorea.setRowHeight(30);
+        tbBahasaKorea.setRowMargin(3);
+        jScrollPane2.setViewportView(tbBahasaKorea);
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -489,7 +489,7 @@ public class BahasaKorea_View extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTable tbBahasaKorea;
     // End of variables declaration//GEN-END:variables
 }

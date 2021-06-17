@@ -6,6 +6,7 @@
 package login;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JTextField;
 
 /**
@@ -19,6 +20,7 @@ public class Login_View extends javax.swing.JFrame {
      */
     public Login_View() {
         initComponents();
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     public JButton getBtnLogin() {

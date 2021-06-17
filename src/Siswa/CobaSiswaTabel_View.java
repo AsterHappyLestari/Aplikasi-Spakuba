@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Kelas;
+package Siswa;
 
+import Pengajar.*;
+import Kelas.*;
 import Siswa.*;
 import javax.swing.JFrame;
 
@@ -12,12 +14,12 @@ import javax.swing.JFrame;
  *
  * @author USER
  */
-public class BahasaInggris_View extends javax.swing.JFrame {
+public class CobaSiswaTabel_View extends javax.swing.JFrame {
 
     /**
      * Creates new form CobaHome_View
      */
-    public BahasaInggris_View() {
+    public CobaSiswaTabel_View() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
@@ -52,7 +54,7 @@ public class BahasaInggris_View extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tbBahasaInggris = new javax.swing.JTable();
+        tabelSiswa = new javax.swing.JTable();
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
 
@@ -170,7 +172,7 @@ public class BahasaInggris_View extends javax.swing.JFrame {
         btnExit.setBackground(new java.awt.Color(0, 204, 204));
         btnExit.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logout.png"))); // NOI18N
-        btnExit.setText("LOG OUT");
+        btnExit.setText("KELUAR");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -236,40 +238,40 @@ public class BahasaInggris_View extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Data Kelas Bahasa Inggris");
+        jLabel6.setText("Data Siswa");
 
-        tbBahasaInggris.setBackground(new java.awt.Color(0, 204, 204));
-        tbBahasaInggris.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        tbBahasaInggris.setModel(new javax.swing.table.DefaultTableModel(
+        tabelSiswa.setBackground(new java.awt.Color(0, 204, 204));
+        tabelSiswa.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        tabelSiswa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Id Kelas", "Nama Kelas", "Program Bahasa", "Hari"
+                "Id Siswa", "Nama Lengkap", "Tempat/Tanggal Lahir", "No Telepon", "Alamat", "Id Kelas"
             }
         ));
-        tbBahasaInggris.setRowHeight(30);
-        tbBahasaInggris.setRowMargin(3);
-        jScrollPane2.setViewportView(tbBahasaInggris);
+        tabelSiswa.setRowHeight(30);
+        tabelSiswa.setRowMargin(3);
+        jScrollPane2.setViewportView(tabelSiswa);
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -417,14 +419,38 @@ public class BahasaInggris_View extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BahasaInggris_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CobaSiswaTabel_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BahasaInggris_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CobaSiswaTabel_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BahasaInggris_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CobaSiswaTabel_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BahasaInggris_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CobaSiswaTabel_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -437,7 +463,7 @@ public class BahasaInggris_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BahasaInggris_View().setVisible(true);
+                new CobaSiswaTabel_View().setVisible(true);
             }
         });
     }
@@ -466,6 +492,6 @@ public class BahasaInggris_View extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTable tbBahasaInggris;
+    private javax.swing.JTable tabelSiswa;
     // End of variables declaration//GEN-END:variables
 }

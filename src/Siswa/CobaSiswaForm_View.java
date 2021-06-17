@@ -572,7 +572,12 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
 
     private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
         // TODO add your handling code here:
-        CobaSiswaHome_View sishome = new CobaSiswaHome_View();
+        CobaSiswaHome_View sishome = null;
+        try {
+            sishome = new CobaSiswaHome_View();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaSiswaForm_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
         sishome.setVisible(true);
         sishome.toFront();
         dispose();
