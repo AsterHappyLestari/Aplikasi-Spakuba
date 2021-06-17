@@ -301,13 +301,13 @@ public class JadwalSenin_View extends javax.swing.JFrame {
 
         Tabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Id Kelas", "Nama Pengajar", "Hari", "Waktu"
+                "Id Kelas", "Nama Pengajar", "Waktu"
             }
         ));
         jScrollPane1.setViewportView(Tabel);

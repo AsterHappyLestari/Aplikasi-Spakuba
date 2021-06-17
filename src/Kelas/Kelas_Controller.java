@@ -24,7 +24,6 @@ public class Kelas_Controller {
     Koneksi k;
 
     public Kelas_Controller(CobaKelasForm_View view) throws ClassNotFoundException{
-
         this.view = view;
         dao = new Kelas_DAO();
         k = new Koneksi();
@@ -36,7 +35,7 @@ public class Kelas_Controller {
     public void kelas(){
         model = new Kelas_Model();
         model.setId_kelas(view.getTxtId_kelas().getText());
-        model.setNamaSiswa(view.getTxtNamaKelas().getText());
+        model.setNamaKelas(view.getTxtNamaKelas().getText());
         model.setProgramkls(view.getCbProgramkls().getSelectedItem().toString());
         model.setHari(view.getCbHari().getSelectedItem().toString());
 
