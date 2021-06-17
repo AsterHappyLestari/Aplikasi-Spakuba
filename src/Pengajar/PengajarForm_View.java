@@ -19,7 +19,7 @@ public class PengajarForm_View extends javax.swing.JFrame {
     Pengajar_Controller controller;
     public PengajarForm_View() throws ClassNotFoundException {
         initComponents();
-        controller = new Pengajar_Controller(this);
+       // controller = new Pengajar_Controller(this);
     }
     public JButton getBtnSimpan() {
         return btnSimpan;
