@@ -51,6 +51,19 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,14 +85,14 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -103,7 +116,7 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addComponent(btnKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -127,7 +140,7 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnJadwal, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addComponent(btnJadwal, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -151,7 +164,7 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(btnSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addComponent(btnSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -177,7 +190,7 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnExit, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addComponent(btnExit, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -208,9 +221,9 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(265, 265, 265)
                 .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(272, 272, 272))
+                .addContainerGap())
         );
 
         jPanel2.setBackground(new java.awt.Color(0, 204, 204));
@@ -263,15 +276,99 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel5.setText("Id Siswa");
+
+        jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel6.setText("Nama Siswa");
+
+        jTextField3.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel7.setText("Tempat/Tgl. Lahir");
+
+        jTextField4.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel8.setText("No Telepon");
+
+        jTextField5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel9.setText("Alamat");
+
+        jTextField6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel10.setText("Id Kelas");
+
+        jTextField7.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+
+        jButton1.setBackground(new java.awt.Color(0, 204, 204));
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/save.png"))); // NOI18N
+        jButton1.setText("SIMPAN");
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10))
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField2)
+                            .addComponent(jTextField3)
+                            .addComponent(jTextField4)
+                            .addComponent(jTextField5)
+                            .addComponent(jTextField6)
+                            .addComponent(jTextField7))))
+                .addGap(48, 48, 48))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
 
         jPanel12.setBackground(new java.awt.Color(0, 0, 0));
@@ -414,10 +511,17 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
     private javax.swing.JButton btnKelas;
     private javax.swing.JButton btnPengajar;
     private javax.swing.JButton btnSiswa;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -431,5 +535,11 @@ public class CobaSiswaForm_View extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }
