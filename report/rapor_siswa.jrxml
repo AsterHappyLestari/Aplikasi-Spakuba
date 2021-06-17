@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rapor_siswa" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="32e6751a-0100-40d6-94a3-7c64fa309a8c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     siswa.`id_siswa` AS siswa_id_siswa,
+     siswa.`namasiswa` AS siswa_namasiswa,
+     siswa.`ttlsiswa` AS siswa_ttlsiswa,
+     siswa.`notelpsiswa` AS siswa_notelpsiswa,
+     siswa.`alamatsiswa` AS siswa_alamatsiswa,
+     siswa.`id_kelas` AS siswa_id_kelas
+FROM
+     `siswa` siswa]]>
+	</queryString>
+	<field name="siswa_id_siswa" class="java.lang.Integer"/>
+	<field name="siswa_namasiswa" class="java.lang.String"/>
+	<field name="siswa_ttlsiswa" class="java.lang.String"/>
+	<field name="siswa_notelpsiswa" class="java.lang.Integer"/>
+	<field name="siswa_alamatsiswa" class="java.lang.String"/>
+	<field name="siswa_id_kelas" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1f0b4aec-b37d-4e57-9f4f-22c372fa4bef" x="218" y="11" width="149" height="20"/>
+				<textElement/>
+				<text><![CDATA[LAPORAN NILAI SISWA	]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f220d0f0-e31b-41be-8004-7b2a372043b3" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[id siswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3138d1e4-8288-478c-aa56-60caa1002f2d" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[nama siswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f955645e-9bf0-492c-b586-e93f572920ee" x="200" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[tanggal lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2d0a4cfc-c5ea-4e8d-86bd-5752179d98e2" x="300" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[no telpon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4e2f90c1-9498-471b-bffe-1942f182225d" x="400" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4add37c1-6a0a-4f5f-b937-ec11196bd241" x="500" y="0" width="68" height="20"/>
+				<textElement/>
+				<text><![CDATA[id kelas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1a11a786-64dd-4aee-b3b6-6667d74f6438" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{siswa_id_siswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="271b634a-b442-40ec-86b5-d5c676f55530" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{siswa_namasiswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="843f2118-bf0f-4ac0-8425-b8e2d88553fd" x="200" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{siswa_ttlsiswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9ff41cb9-7460-48c6-bceb-1a7e67fd2636" x="300" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{siswa_notelpsiswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1f594a30-620b-4f16-918a-d380d0eb3f69" x="400" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{siswa_alamatsiswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="87cee241-8fb9-4977-9a51-c41ab4bf76d0" x="500" y="0" width="68" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{siswa_id_kelas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
