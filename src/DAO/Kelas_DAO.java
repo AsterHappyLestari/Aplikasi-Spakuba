@@ -31,6 +31,7 @@ public class Kelas_DAO {
        ps.setString(3, kelas.getProgramkls());
        ps.setString(4, kelas.getHari());
        ps.executeUpdate();
+
    }
    public static void update(Connection con, Kelas_Model kelas) throws SQLException{
        String sql = "update kelas set NamaKelas=?, programkls=?, hari=?"

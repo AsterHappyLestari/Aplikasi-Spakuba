@@ -25,22 +25,20 @@ public class Ajar_DAO {
    }
    
    public void insert(Connection con, Ajar_Model ajar) throws SQLException{
-       String sql = "insert into ajar values(?,?,?,?)";
+       String sql = "insert into ajar values(?,?,?)";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, ajar.getId_kelas());
        ps.setString(2, ajar.getId_pengajar());
-       ps.setString(3, ajar.getTanggal());
-       ps.setString(4, ajar.getWaktu());
+       ps.setString(3, ajar.getWaktu());
        ps.executeUpdate();
    }
    public static void update(Connection con, Ajar_Model ajar) throws SQLException{
-       String sql = "update ajar set id_pengajar=?, tanggal=?, waktu=?"
-               +"where id_kelas=?";
+       String sql = "update ajar set id_kelas, namapengajar=?, waktu=?"
+               +"where hari='Senin' ";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, ajar.getId_kelas());
        ps.setString(2, ajar.getId_pengajar());
-       ps.setString(3, ajar.getTanggal());
-       ps.setString(4, ajar.getWaktu());
+       ps.setString(3, ajar.getWaktu());
        ps.executeUpdate();
    }
    public static void delete(Connection con, Ajar_Model ajar) throws SQLException{
@@ -51,7 +49,8 @@ public class Ajar_DAO {
 
    }
    public static Ajar_Model getAjar(Connection con, String id_kelas) throws SQLException{
-       String sql = "select * from ajar where id_kelas=?";
+       String sql = "select id_kelas, namapengajar=?, waktu=? from ajar"
+               +"where hari='Senin'";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, id_kelas);
        Ajar_Model ajar = null;

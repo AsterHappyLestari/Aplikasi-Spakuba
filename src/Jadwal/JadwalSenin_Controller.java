@@ -38,10 +38,8 @@ public class JadwalSenin_Controller {
         try{
         DefaultTableModel tableModel = (DefaultTableModel)view.getTabel().getModel();
         tableModel.setRowCount(0);
-        ResultSet rs = k.getQuery(con, "SELECT `kelas`.`id_kelas`, `ajar`.`waktu`, `pengajar`.`namapengajar`\n" +
-"FROM `kelas` \n" +
-"	LEFT JOIN `ajar` ON `ajar`.`id_kelas` = `kelas`.`id_kelas` \n" +
-"	LEFT JOIN `pengajar` ON `ajar`.`id_pengajar` = `pengajar`.`id_pengajar` where hari= 'Senin';");
+        ResultSet rs = k.getQuery(con, "select id_kelas, id_pengajar, waktu from ajar"
+                + "where hari= 'Senin'");
         
         while(rs.next()){
             Object data[] = {
