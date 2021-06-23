@@ -440,10 +440,16 @@ public class BahasaInggris_View extends javax.swing.JFrame {
 
     private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
         // TODO add your handling code here:
-        CobaPengajarHome_View guruhome = new CobaPengajarHome_View();
-        guruhome.setVisible(true);
-        guruhome.toFront();
-        dispose();
+        CobaPengajarHome_View guruhome;
+         try {
+             guruhome = new CobaPengajarHome_View();
+             guruhome.setVisible(true);
+             guruhome.toFront();
+             dispose();
+         } catch (ClassNotFoundException ex) {
+             Logger.getLogger(BahasaInggris_View.class.getName()).log(Level.SEVERE, null, ex);
+         }
+       
     }//GEN-LAST:event_btnPengajarActionPerformed
 
     private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed

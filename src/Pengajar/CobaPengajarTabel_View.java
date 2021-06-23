@@ -8,6 +8,7 @@ package Pengajar;
 import Jadwal.JadwalHome_View;
 import Kelas.*;
 import Siswa.*;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
@@ -24,8 +25,11 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
     /**
      * Creates new form CobaHome_View
      */
-    public CobaPengajarTabel_View() {
+    
+    PengajarTabel_Controller c;
+    public CobaPengajarTabel_View() throws ClassNotFoundException {
         initComponents();
+        c = new PengajarTabel_Controller(this);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
@@ -83,8 +87,6 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tabelPengajar = new javax.swing.JTable();
-        jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(0, 0));
@@ -321,33 +323,16 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
         ));
         tabelPengajar.setRowHeight(30);
         tabelPengajar.setRowMargin(3);
+        tabelPengajar.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tabelPengajarAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jScrollPane2.setViewportView(tabelPengajar);
-
-        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 675, Short.MAX_VALUE)
-        );
-
-        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -357,13 +342,9 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
                 .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(23, 23, 23))
+                .addGap(142, 142, 142)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
+                .addGap(100, 100, 100))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -371,11 +352,8 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
+                .addGap(88, 88, 88))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -456,10 +434,15 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
 
     private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
         // TODO add your handling code here:
-        CobaPengajarHome_View kelashome = new CobaPengajarHome_View();
-        kelashome.setVisible(true);
+        CobaPengajarHome_View kelashome;
+        try {
+            kelashome = new CobaPengajarHome_View();
+            kelashome.setVisible(true);
         kelashome.toFront();
         dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaPengajarTabel_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnPengajarActionPerformed
 
     private void btnJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJadwalActionPerformed
@@ -485,6 +468,15 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
         awal.toFront();
         dispose();
     }//GEN-LAST:event_btnExitActionPerformed
+
+    private void tabelPengajarAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tabelPengajarAncestorAdded
+        try {
+            // TODO add your handling code here:
+            c.viewTable();
+        } catch (SQLException ex) {
+            Logger.getLogger(CobaPengajarTabel_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_tabelPengajarAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -531,7 +523,11 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CobaPengajarTabel_View().setVisible(true);
+                try {
+                    new CobaPengajarTabel_View().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(CobaPengajarTabel_View.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -547,7 +543,6 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -556,7 +551,6 @@ public class CobaPengajarTabel_View extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tabelPengajar;

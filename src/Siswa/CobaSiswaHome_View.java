@@ -478,10 +478,15 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
 
     private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
         // TODO add your handling code here:
-        CobaPengajarHome_View guruhome = new CobaPengajarHome_View();
-        guruhome.setVisible(true);
-        guruhome.toFront();
-        dispose();
+        CobaPengajarHome_View guruhome;
+        try {
+            guruhome = new CobaPengajarHome_View();
+            guruhome.setVisible(true);
+            guruhome.toFront();
+            dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaSiswaHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnPengajarActionPerformed
 
     private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
@@ -512,9 +517,14 @@ public class CobaSiswaHome_View extends javax.swing.JFrame {
 
     private void btnDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataActionPerformed
         // TODO add your handling code here:
-        CobaSiswaTabel_View tabelhome = new CobaSiswaTabel_View();
-        tabelhome.setVisible(true);
-        tabelhome.toFront();
+        CobaSiswaTabel_View tabelhome;
+        try {
+            tabelhome = new CobaSiswaTabel_View();
+            tabelhome.setVisible(true);
+            tabelhome.toFront();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaSiswaHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
         dispose();
     }//GEN-LAST:event_btnDataActionPerformed
 

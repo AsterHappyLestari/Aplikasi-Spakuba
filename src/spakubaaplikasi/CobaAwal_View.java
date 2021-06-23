@@ -8,6 +8,7 @@ package spakubaaplikasi;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import login.Login_View;
 import registrasi.Registrasi_View;
 
 
@@ -240,7 +241,10 @@ public class CobaAwal_View extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        
+        Login_View login = new Login_View();
+        login.setVisible(true);
+        login.toFront();
+        dispose();
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed

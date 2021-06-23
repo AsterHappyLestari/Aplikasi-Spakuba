@@ -23,11 +23,17 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
     /**
      * Creates new form CobaHome_View
      */
-    public CobaPengajarHome_View() {
+    CobaPengajarHome_Controller controller;
+    public CobaPengajarHome_View() throws ClassNotFoundException {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        controller = new CobaPengajarHome_Controller(this);
     }
 
+    public JButton getBtncetaklaporan() {
+        return btncetaklaporan;
+    }
+    
     public JButton getBtnDataPengajar() {
         return btnDataPengajar;
     }
@@ -89,6 +95,9 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         btnDataPengajar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        btncetaklaporan = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -313,9 +322,9 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnInput, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnInput, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
         );
 
         jPanel10.setBackground(new java.awt.Color(0, 204, 204));
@@ -343,8 +352,37 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(1, 1, 1)
-                .addComponent(btnDataPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDataPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel12.setBackground(new java.awt.Color(0, 204, 204));
+
+        btncetaklaporan.setBackground(new java.awt.Color(0, 204, 204));
+        btncetaklaporan.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        btncetaklaporan.setText("CETAK LAPORAN");
+        btncetaklaporan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncetaklaporanActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/exam.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btncetaklaporan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btncetaklaporan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -352,11 +390,13 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(163, 163, 163)
+                .addGap(34, 34, 34)
                 .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(98, 98, 98)
+                .addGap(30, 30, 30)
                 .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(124, 124, 124))
+                .addGap(28, 28, 28)
+                .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(37, 37, 37))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -364,7 +404,8 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
                 .addGap(197, 197, 197)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(245, 245, 245))
         );
 
@@ -411,7 +452,7 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 930, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 938, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -441,10 +482,16 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
 
     private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
         // TODO add your handling code here:
-        CobaPengajarHome_View guruhome = new CobaPengajarHome_View();
-        guruhome.setVisible(true);
-        guruhome.toFront();
-        dispose();
+        CobaPengajarHome_View guruhome;
+        try {
+            guruhome = new CobaPengajarHome_View();
+            guruhome.setVisible(true);
+            guruhome.toFront();
+            dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaPengajarHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_btnPengajarActionPerformed
 
     private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
@@ -476,10 +523,15 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
 
     private void btnDataPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataPengajarActionPerformed
         // TODO add your handling code here:
-        CobaPengajarTabel_View tabelhome = new CobaPengajarTabel_View();
-        tabelhome.setVisible(true);
-        tabelhome.toFront();
-        dispose();
+        CobaPengajarTabel_View tabelhome;
+        try {
+            tabelhome = new CobaPengajarTabel_View();
+            tabelhome.setVisible(true);
+            tabelhome.toFront();
+            dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CobaPengajarHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnDataPengajarActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
@@ -497,6 +549,11 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
         kelashome.toFront();
         dispose();
     }//GEN-LAST:event_btnJadwalActionPerformed
+
+    private void btncetaklaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncetaklaporanActionPerformed
+        // TODO add your handling code here:
+        controller.previewdata_pengajar_();
+    }//GEN-LAST:event_btncetaklaporanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -535,7 +592,11 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CobaPengajarHome_View().setVisible(true);
+                try {
+                    new CobaPengajarHome_View().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(CobaPengajarHome_View.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -548,14 +609,17 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
     private javax.swing.JButton btnKelas;
     private javax.swing.JButton btnPengajar;
     private javax.swing.JButton btnSiswa;
+    private javax.swing.JButton btncetaklaporan;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;

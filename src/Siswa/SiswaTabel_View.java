@@ -23,7 +23,7 @@ public class SiswaTabel_View extends javax.swing.JFrame {
     SiswaTabel_Controller c;
     public SiswaTabel_View() throws ClassNotFoundException {
         initComponents();
-        c = new SiswaTabel_Controller(this);
+//        c = new SiswaTabel_Controller(this);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 

@@ -566,10 +566,15 @@ public class CobaPengajarForm_View extends javax.swing.JFrame {
 
     private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
         // TODO add your handling code here:
-        CobaPengajarHome_View kelashome = new CobaPengajarHome_View();
-        kelashome.setVisible(true);
-        kelashome.toFront();
-        dispose();
+        CobaPengajarHome_View kelashome;
+          try {
+              kelashome = new CobaPengajarHome_View();
+            kelashome.setVisible(true);
+            kelashome.toFront();
+            dispose();
+          } catch (ClassNotFoundException ex) {
+              Logger.getLogger(CobaPengajarForm_View.class.getName()).log(Level.SEVERE, null, ex);
+          }
     }//GEN-LAST:event_btnPengajarActionPerformed
 
     private void btnJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJadwalActionPerformed

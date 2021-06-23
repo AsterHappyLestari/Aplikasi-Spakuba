@@ -5,7 +5,16 @@
  */
 package Jadwal;
 
+import Kelas.CobaKelasForm_View;
+import Kelas.CobaKelasHome_View;
+import Pengajar.CobaPengajarHome_View;
+import Siswa.CobaSiswaHome_View;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JTable;
+import login.Login_View;
 
 /**
  *
@@ -16,8 +25,11 @@ public class JadwalSenin_View extends javax.swing.JFrame {
     /**
      * Creates new form JadwalSenin_View
      */
-    public JadwalSenin_View() {
+    JadwalSenin_Controller c;
+    public JadwalSenin_View() throws ClassNotFoundException {
         initComponents();
+        c = new JadwalSenin_Controller(this);
+         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     public JTable getTabel() {
@@ -49,18 +61,11 @@ public class JadwalSenin_View extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Tabel = new javax.swing.JTable();
 
@@ -77,6 +82,11 @@ public class JadwalSenin_View extends javax.swing.JFrame {
         btnPengajar.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnPengajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/pengajar1.png"))); // NOI18N
         btnPengajar.setText("PENGAJAR");
+        btnPengajar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPengajarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -84,14 +94,14 @@ public class JadwalSenin_View extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -101,6 +111,11 @@ public class JadwalSenin_View extends javax.swing.JFrame {
         btnKelas.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnKelas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/kelas.png"))); // NOI18N
         btnKelas.setText("KELAS");
+        btnKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKelasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -115,7 +130,7 @@ public class JadwalSenin_View extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                .addComponent(btnKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -125,6 +140,11 @@ public class JadwalSenin_View extends javax.swing.JFrame {
         btnJadwal.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnJadwal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/jadwal.png"))); // NOI18N
         btnJadwal.setText("JADWAL");
+        btnJadwal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJadwalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -139,7 +159,7 @@ public class JadwalSenin_View extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnJadwal, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                .addComponent(btnJadwal, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -149,6 +169,11 @@ public class JadwalSenin_View extends javax.swing.JFrame {
         btnSiswa.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnSiswa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/siswa.png"))); // NOI18N
         btnSiswa.setText("SISWA");
+        btnSiswa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSiswaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -163,7 +188,7 @@ public class JadwalSenin_View extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(btnSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                .addComponent(btnSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -174,7 +199,12 @@ public class JadwalSenin_View extends javax.swing.JFrame {
         btnExit.setBackground(new java.awt.Color(0, 204, 204));
         btnExit.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logout.png"))); // NOI18N
-        btnExit.setText("LOG OUT");
+        btnExit.setText("KELUAR");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -189,7 +219,7 @@ public class JadwalSenin_View extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnExit, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                .addComponent(btnExit, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -233,9 +263,6 @@ public class JadwalSenin_View extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 60)); // NOI18N
         jLabel1.setText("SPAKUBA");
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField1.setText("Search...");
-
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
@@ -271,7 +298,7 @@ public class JadwalSenin_View extends javax.swing.JFrame {
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jPanel12.setBackground(new java.awt.Color(255, 255, 255));
@@ -287,18 +314,6 @@ public class JadwalSenin_View extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jButton1.setText("Senin");
-
-        jButton2.setText("Selasa");
-
-        jButton3.setText("Rabu");
-
-        jButton4.setText("Kamis");
-
-        jButton5.setText("Jumat");
-
-        jButton6.setText("Sabtu");
-
         Tabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -310,6 +325,15 @@ public class JadwalSenin_View extends javax.swing.JFrame {
                 "Id Kelas", "Nama Pengajar", "Waktu"
             }
         ));
+        Tabel.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                TabelAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jScrollPane1.setViewportView(Tabel);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -320,24 +344,9 @@ public class JadwalSenin_View extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGap(51, 51, 51)
+                .addComponent(jScrollPane1)
+                .addGap(173, 173, 173)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -351,15 +360,7 @@ public class JadwalSenin_View extends javax.swing.JFrame {
                             .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2)
-                            .addComponent(jButton3)
-                            .addComponent(jButton4)
-                            .addComponent(jButton5)
-                            .addComponent(jButton6))
-                        .addGap(28, 28, 28)
+                        .addGap(95, 95, 95)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
@@ -375,27 +376,16 @@ public class JadwalSenin_View extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))
                         .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGap(36, 36, 36)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -418,7 +408,7 @@ public class JadwalSenin_View extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 942, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 966, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -426,25 +416,80 @@ public class JadwalSenin_View extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1140, Short.MAX_VALUE)
+            .addGap(0, 1158, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 53, Short.MAX_VALUE)
-                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 54, Short.MAX_VALUE)))
+                .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 964, Short.MAX_VALUE)
+            .addGap(0, 998, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TabelAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_TabelAncestorAdded
+        try {
+            // TODO add your handling code here:
+            c.viewTable();
+        } catch (SQLException ex) {
+            Logger.getLogger(JadwalSenin_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_TabelAncestorAdded
+
+    private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
+        try {
+            // TODO add your handling code here:
+            CobaSiswaHome_View siswahome = new CobaSiswaHome_View();
+            siswahome.setVisible(true);
+            siswahome.toFront();
+            dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(JadwalSenin_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnSiswaActionPerformed
+
+    private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
+        // TODO add your handling code here:
+        CobaPengajarHome_View guruhome;
+        try {
+            guruhome = new CobaPengajarHome_View();
+            guruhome.setVisible(true);
+            guruhome.toFront();
+            dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(JadwalSenin_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+    }//GEN-LAST:event_btnPengajarActionPerformed
+
+    private void btnJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJadwalActionPerformed
+        // TODO add your handling code here:
+        JadwalHome_View jadwal = new JadwalHome_View();
+        jadwal.setVisible(true);
+        jadwal.toFront();
+        dispose();
+    }//GEN-LAST:event_btnJadwalActionPerformed
+
+    private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
+        // TODO add your handling code here:
+        CobaKelasHome_View kelas = new CobaKelasHome_View();
+        kelas.setVisible(true);
+        kelas.toFront();
+        dispose();
+    }//GEN-LAST:event_btnKelasActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        // TODO add your handling code here:
+        Login_View login = new Login_View();
+        login.setVisible(true);
+        login.toFront();
+        dispose();
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -476,7 +521,11 @@ public class JadwalSenin_View extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JadwalSenin_View().setVisible(true);
+                try {
+                    new JadwalSenin_View().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(JadwalSenin_View.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -488,12 +537,6 @@ public class JadwalSenin_View extends javax.swing.JFrame {
     private javax.swing.JButton btnKelas;
     private javax.swing.JButton btnPengajar;
     private javax.swing.JButton btnSiswa;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -511,6 +554,5 @@ public class JadwalSenin_View extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

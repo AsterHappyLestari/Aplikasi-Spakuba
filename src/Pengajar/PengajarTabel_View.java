@@ -24,7 +24,7 @@ public class PengajarTabel_View extends javax.swing.JFrame {
     
     public PengajarTabel_View() throws ClassNotFoundException {
         initComponents();
-        controller = new PengajarTabel_Controller(this);
+   //     controller = new PengajarTabel_Controller(this);
     }
 
     public JTable getTabel() {

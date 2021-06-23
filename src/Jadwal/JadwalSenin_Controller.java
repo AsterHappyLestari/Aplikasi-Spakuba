@@ -38,8 +38,7 @@ public class JadwalSenin_Controller {
         try{
         DefaultTableModel tableModel = (DefaultTableModel)view.getTabel().getModel();
         tableModel.setRowCount(0);
-        ResultSet rs = k.getQuery(con, "select id_kelas, id_pengajar, waktu from ajar"
-                + "where hari= 'Senin'");
+        ResultSet rs = k.getQuery(con, "select id_kelas, id_pengajar, waktu from ajar");
         
         while(rs.next()){
             Object data[] = {

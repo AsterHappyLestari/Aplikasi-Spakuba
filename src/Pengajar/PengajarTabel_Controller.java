@@ -20,13 +20,13 @@ import koneksi.Koneksi;
  * @author user
  */
 public class PengajarTabel_Controller {
-    PengajarTabel_View view;
+    CobaPengajarTabel_View view;
     Pengajar_Model model;
     Pengajar_DAO dao;
     Connection con;
     Koneksi k;
 
-    public PengajarTabel_Controller(PengajarTabel_View view) throws ClassNotFoundException{
+    public PengajarTabel_Controller(CobaPengajarTabel_View view) throws ClassNotFoundException{
 
         this.view = view;
         dao = new Pengajar_DAO();
@@ -36,7 +36,7 @@ public class PengajarTabel_Controller {
 
     public void viewTable() throws SQLException{
         try{
-        DefaultTableModel tableModel = (DefaultTableModel)view.getTabel().getModel();
+        DefaultTableModel tableModel = (DefaultTableModel)view.getTabelPengajar().getModel();
         tableModel.setRowCount(0);
         ResultSet rs = k.getQuery(con, "SELECT id_pengajar, namapengajar, email, notelppengajar, alamatpengajar from pengajar");
         

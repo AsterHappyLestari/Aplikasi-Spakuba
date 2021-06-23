@@ -25,8 +25,10 @@ public class JadwalHome_View extends javax.swing.JFrame {
     public JadwalHome_View() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        
     }
-
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -56,8 +58,12 @@ public class JadwalHome_View extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        jPanel11 = new javax.swing.JPanel();
+        btnAtur = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        btnList = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,7 +97,7 @@ public class JadwalHome_View extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                .addComponent(btnPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -120,7 +126,7 @@ public class JadwalHome_View extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                .addComponent(btnKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -149,7 +155,7 @@ public class JadwalHome_View extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnJadwal, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                .addComponent(btnJadwal, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -178,7 +184,7 @@ public class JadwalHome_View extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(btnSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addComponent(btnSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -209,7 +215,7 @@ public class JadwalHome_View extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnExit, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                .addComponent(btnExit, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -294,13 +300,68 @@ public class JadwalHome_View extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jButton7.setBackground(new java.awt.Color(0, 204, 204));
-        jButton7.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jButton7.setText("Atur Jadwal");
+        jPanel11.setBackground(new java.awt.Color(0, 204, 204));
 
-        jButton8.setBackground(new java.awt.Color(0, 204, 204));
-        jButton8.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jButton8.setText("List Jadwal");
+        btnAtur.setBackground(new java.awt.Color(0, 204, 204));
+        btnAtur.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        btnAtur.setText("Atur Jadwal");
+        btnAtur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAturActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/calendar.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+                .addGap(3, 3, 3))
+            .addComponent(btnAtur, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnAtur))
+        );
+
+        jPanel14.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel14.setPreferredSize(new java.awt.Dimension(274, 338));
+
+        btnList.setBackground(new java.awt.Color(0, 204, 204));
+        btnList.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        btnList.setText("List Jadwal");
+        btnList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/lecture.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnList, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnList))
+        );
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -310,29 +371,27 @@ public class JadwalHome_View extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(42, 42, 42)
+                .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(91, 91, 91)
+                .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(56, 56, 56)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(216, 216, 216)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton7)
-                            .addComponent(jButton8))
-                        .addGap(0, 468, Short.MAX_VALUE))))
+                            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
+                        .addGap(290, 290, 290))))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -348,7 +407,7 @@ public class JadwalHome_View extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1))
-                        .addContainerGap(384, Short.MAX_VALUE))))
+                        .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -378,7 +437,7 @@ public class JadwalHome_View extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 972, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 980, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -386,7 +445,7 @@ public class JadwalHome_View extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1150, Short.MAX_VALUE)
+            .addGap(0, 1192, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -396,7 +455,7 @@ public class JadwalHome_View extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 16, Short.MAX_VALUE)))
+                    .addGap(0, 8, Short.MAX_VALUE)))
         );
 
         pack();
@@ -417,10 +476,16 @@ public class JadwalHome_View extends javax.swing.JFrame {
 
     private void btnPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengajarActionPerformed
         // TODO add your handling code here:
-        CobaPengajarHome_View guruhome = new CobaPengajarHome_View();
-        guruhome.setVisible(true);
-        guruhome.toFront();
-        dispose();
+        CobaPengajarHome_View guruhome;
+        try {
+            guruhome = new CobaPengajarHome_View();
+            guruhome.setVisible(true);
+            guruhome.toFront();
+            dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(JadwalHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
     }//GEN-LAST:event_btnPengajarActionPerformed
 
     private void btnJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJadwalActionPerformed
@@ -446,6 +511,32 @@ public class JadwalHome_View extends javax.swing.JFrame {
         awal.toFront();
         dispose();
     }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListActionPerformed
+        // TODO add your handling code here:
+        JadwalSenin_View senin;
+        try {
+            senin = new JadwalSenin_View();
+            senin.setVisible(true);
+            senin.toFront();
+            dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(JadwalHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnListActionPerformed
+
+    private void btnAturActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAturActionPerformed
+        try {
+            // TODO add your handling code here:
+            JadwalForm_View form = new JadwalForm_View();
+            form.setVisible(true);
+            form.toFront();
+            dispose();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(JadwalHome_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_btnAturActionPerformed
 
     /**
      * @param args the command line arguments
@@ -483,20 +574,24 @@ public class JadwalHome_View extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAtur;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnJadwal;
     private javax.swing.JButton btnKelas;
+    private javax.swing.JButton btnList;
     private javax.swing.JButton btnPengajar;
     private javax.swing.JButton btnSiswa;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;

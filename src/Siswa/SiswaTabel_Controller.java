@@ -20,13 +20,13 @@ import koneksi.Koneksi;
  * @author user
  */
 public class SiswaTabel_Controller {
-    SiswaTabel_View view;
+    CobaSiswaTabel_View view;
     Siswa_Model model;
     Siswa_DAO dao;
     Connection con;
     Koneksi k;
 
-    public SiswaTabel_Controller(SiswaTabel_View view) throws ClassNotFoundException{
+    public SiswaTabel_Controller(CobaSiswaTabel_View view) throws ClassNotFoundException{
 
         this.view = view;
         dao = new Siswa_DAO();
@@ -36,7 +36,7 @@ public class SiswaTabel_Controller {
 
     public void viewTable() throws SQLException{
         try{
-        DefaultTableModel tableModel = (DefaultTableModel)view.getTabel().getModel();
+        DefaultTableModel tableModel = (DefaultTableModel)view.getTabelSiswa().getModel();
         tableModel.setRowCount(0);
         ResultSet rs = k.getQuery(con, "SELECT * from siswa");
         

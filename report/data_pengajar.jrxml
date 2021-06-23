@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="data_pengajar" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d32c48d6-9bcb-451a-8f0e-cfeafa0fe535">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pengajar.`id_pengajar` AS pengajar_id_pengajar,
+     pengajar.`namapengajar` AS pengajar_namapengajar,
+     pengajar.`email` AS pengajar_email,
+     pengajar.`notelppengajar` AS pengajar_notelppengajar,
+     pengajar.`alamatpengajar` AS pengajar_alamatpengajar
+FROM
+     `pengajar` pengajar]]>
+	</queryString>
+	<field name="pengajar_id_pengajar" class="java.lang.Integer"/>
+	<field name="pengajar_namapengajar" class="java.lang.String"/>
+	<field name="pengajar_email" class="java.lang.String"/>
+	<field name="pengajar_notelppengajar" class="java.lang.Integer"/>
+	<field name="pengajar_alamatpengajar" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement uuid="ead00b42-8779-4d5a-9668-9fdd1c86bda4" x="200" y="0" width="224" height="50"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Data Pengajar]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a5109876-a3c5-4a8c-b059-746e40c87f82" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[ID Pengajar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="11784f28-02d0-4880-b9b1-991d05e241c8" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Pengajar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2a6106d0-3ce4-481d-b2f2-c61fb6198844" x="214" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a5a1cce5-fafc-43b3-829f-6389668e44d3" x="331" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[No Telepon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f4a1a9a2-77ea-4da6-8905-3887ffab33de" x="455" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement uuid="627e7bb6-d643-459f-b664-732a58ab4660" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengajar_id_pengajar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="66c1b469-1dcb-4faf-966a-ac5450c5ee9a" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengajar_namapengajar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="00c42187-66fc-422a-bf5d-db78ffe61333" x="214" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengajar_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="995b7e10-33c5-4101-8c39-1e5555a4a7f7" x="331" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengajar_notelppengajar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6c2a3097-0a32-4a3f-9a6c-d24b651adbc8" x="455" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengajar_alamatpengajar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
