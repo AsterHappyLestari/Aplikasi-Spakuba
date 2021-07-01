@@ -552,7 +552,7 @@ public class CobaPengajarHome_View extends javax.swing.JFrame {
 
     private void btncetaklaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncetaklaporanActionPerformed
         // TODO add your handling code here:
-        controller.previewdata_pengajar_();
+        controller.previewdata_pengajar();
     }//GEN-LAST:event_btncetaklaporanActionPerformed
 
     /**

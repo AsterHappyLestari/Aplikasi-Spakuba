@@ -61,11 +61,11 @@ public class CobaPengajarHome_Controller {
 //            javax.swing.JOptionPane.showMessageDialog(null, "Error"+ex.getMessage());
 //        }
 //}
-      public void previewdata_pengajar_(){
+      public void previewdata_pengajar(){
         HashMap parameter = new HashMap();
         JasperPrint jasperPrint = null;
         try {
-            jasperPrint = JasperFillManager.fillReport("report/data_pengajar.jasper", parameter, con);
+            jasperPrint = JasperFillManager.fillReport("report/data_pelajar.jasper", parameter, con);
             JasperViewer.viewReport(jasperPrint, false);
         } catch (Exception ex) {
             System.out.print(ex.toString());

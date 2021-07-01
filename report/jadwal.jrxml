@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="jadwal" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f5997e7d-75bb-4250-8732-a4cebb1b312c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     ajar.`id_kelas` AS ajar_id_kelas,
+     ajar.`id_pengajar` AS ajar_id_pengajar,
+     ajar.`tanggal` AS ajar_tanggal,
+     ajar.`waktu` AS ajar_waktu
+FROM
+     `ajar` ajar]]>
+	</queryString>
+	<field name="ajar_id_kelas" class="java.lang.Integer"/>
+	<field name="ajar_id_pengajar" class="java.lang.Integer"/>
+	<field name="ajar_tanggal" class="java.lang.String"/>
+	<field name="ajar_waktu" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="66ca50b5-3d07-43b8-b6bb-6daf8d99750a" x="248" y="7" width="154" height="72"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jadwal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="162cbee6-43c3-43cb-9983-7377a44d1f32" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[ajar_id_kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e12ad445-6a1e-4a95-ab2a-c19a86c833ac" x="139" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[ajar_id_pengajar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="051a91b6-c337-4e92-983c-c30bb223e176" x="302" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[ajar_tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="82fa1a23-a79b-444d-85a6-6fdd10c35a02" x="455" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[ajar_waktu]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="43fe8631-5cce-488b-8ae7-7926cc8a0418" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ajar_id_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9e0788e2-347d-4cc4-902c-edf2d7781a44" x="139" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ajar_id_pengajar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="56454fd7-b157-4875-a810-8df4c20d3f67" x="302" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ajar_tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7bbe1c98-124c-4cdf-9bbe-ae6d3e6118db" x="455" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ajar_waktu}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
