@@ -363,7 +363,7 @@ public class JadwalForm_View extends javax.swing.JFrame {
         jLabel5.setText("Id Kelas");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel6.setText("Nama Pengajar");
+        jLabel6.setText("Id Pengajar");
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel7.setText("Waktu");

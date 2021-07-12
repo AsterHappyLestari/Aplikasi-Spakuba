@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * @author USER
  */
 public class Koneksi {
-    private final String url = "jdbc:mysql://localhost/db_spakuba";
+    private final String url = "jdbc:mysql://localhost/db_spakuba2";
     private final String username = "root";
     private final String password = "";
     

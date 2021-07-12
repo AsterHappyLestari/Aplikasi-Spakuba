@@ -294,7 +294,7 @@ public class JadwalSenin_View extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Id Kelas", "Nama Pengajar", "Waktu"
+                "Id Kelas", "Id Pengajar", "Waktu"
             }
         ));
         Tabel.addAncestorListener(new javax.swing.event.AncestorListener() {
